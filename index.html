@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title data-i18n="pageTitle">Gusthawo Junkes</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#eff6ff',
+                            100: '#dbeafe',
+                            200: '#bfdbfe',
+                            300: '#93c5fd',
+                            400: '#60a5fa',
+                            500: '#3b82f6', // Main blue
+                            600: '#2563eb',
+                            700: '#1d4ed8',
+                            800: '#1e40af',
+                            900: '#1e3a8a',
+                            950: '#172554',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+
+    <header class="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-10 top-0">
+        <div class="container mx-auto flex justify-between items-center">
+            <a href="#hero" class="text-2xl font-bold rounded-md px-3 py-1 hover:bg-gray-700 transition-colors">Gusthawo Junkes</a>
+            <nav class="hidden md:flex space-x-6 items-center">
+                <a href="#about" class="hover:text-primary-400 transition-colors" data-i18n="navAbout">Sobre</a>
+                <a href="#skills" class="hover:text-primary-400 transition-colors" data-i18n="navSkills">Habilidades</a>
+                <a href="#experience" class="hover:text-primary-400 transition-colors" data-i18n="navExperience">Experiência</a>
+                <a href="#projects" class="hover:text-primary-400 transition-colors" data-i18n="navProjects">Projetos</a>
+                <a href="#contact" class="hover:text-primary-400 transition-colors" data-i18n="navContact">Contato</a>
+                <button id="theme-toggle" class="ml-4 p-2 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
+                    <img id="sun-icon" src="assets/icons/sun.svg" class="w-6 h-6 text-yellow-400 hidden" alt="Light mode">
+                    <img id="moon-icon" src="assets/icons/moon.svg" class="w-6 h-6 text-gray-300" alt="Dark mode">
+                </button>
+                <div class="language-dropdown ml-2">
+                    <button id="language-dropdown-button" class="p-2 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
+                        <img id="current-flag" src="./assets/icons/flag-br.svg" alt="Current Language Flag" class="flag-icon">
+                    </button>
+                    <div id="language-dropdown-content" class="language-dropdown-content">
+                        <button data-lang="pt" class="w-full language-option">
+                            <img src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
+                        </button>
+                        <button data-lang="en" class="w-full language-option">
+                            <img src="./assets/icons/flag-us.svg" alt="USA Flag" class="flag-icon">
+                        </button>
+                    </div>
+                </div>
+            </nav>
+            <button id="menu-button" class="md:hidden text-white focus:outline-none">
+                <img src="assets/icons/menu.svg" class="w-6 h-6" alt="Menu">
+            </button>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-8 text-3xl">
+            <button id="close-menu-button" class="absolute top-4 right-4 text-white">
+                <img src="assets/icons/close.svg" class="w-8 h-8" alt="Close menu">
+            </button>
+            <a href="#about" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navAbout">Sobre</a>
+            <a href="#skills" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navSkills">Habilidades</a>
+            <a href="#experience" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navExperience">Experiência</a>
+            <a href="#projects" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navProjects">Projetos</a>
+            <a href="#contact" class="hover:text-primary-400 transition-colors" data-menu-link data-i18n="navContact">Contato</a>
+            <button id="theme-toggle-mobile" class="mt-8 p-3 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
+                <img id="sun-icon-mobile" src="assets/icons/sun.svg" class="w-8 h-8 text-yellow-400 hidden" alt="Light mode">
+                <img id="moon-icon-mobile" src="assets/icons/moon.svg" class="w-8 h-8 text-gray-300" alt="Dark mode">
+            </button>
+            <div class="language-dropdown mt-4">
+                <button id="language-dropdown-button-mobile" class="p-3 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
+                    <img id="current-flag-mobile" src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
+                </button>
+                <div id="language-dropdown-content-mobile" class="language-dropdown-content">
+                    <button data-lang="pt" class="w-full">
+                        <img src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
+                    </button>
+                    <button data-lang="en" class="w-full">
+                        <img src="./assets/icons/flag-us.svg" alt="USA Flag" class="flag-icon">
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="hero" class="bg-gradient-to-r from-gray-800 to-gray-900 text-white flex items-center justify-center min-h-screen section-padding pt-24 md:pt-0">
+            <div class="container mx-auto text-center px-4">
+                <img src="assets/images/profile-picture.jpg" alt="Foto de Perfil" class="w-[150px] h-[150px] object-cover object-center rounded-full mx-auto mb-6 border-4 border-primary-400 shadow-lg">
+                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
+                    <span data-i18n="heroGreeting">Olá, eu sou </span><span id="dynamic-name" class="text-primary-400">Gusthawo Junkes</span>
+                </h1>
+                <div class="flex flex-wrap justify-center items-center gap-4 mt-8 mb-8">
+                    <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java Icon" class="h-8 w-8 md:h-10 md:w-10">
+                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin Icon" class="h-8 w-8 md:h-10 md:w-10">
+                    <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot Icon" class="h-8 w-8 md:h-10 md:w-10">
+                    <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS Icon" class="h-8 w-8 md:h-10 md:w-10">
+                    <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="Kafka Icon" class="h-8 w-8 md:h-10 md:w-10">
+                    <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker Icon" class="h-8 w-8 md:h-10 md:w-10">
+                </div>
+                <a href="#projects" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105" data-i18n="heroButton">Ver Meus Projetos</a>
+            </div>
+        </section>
+
+        <section id="about" class="bg-white dark:bg-gray-800 section-padding">
+            <div class="container mx-auto px-4 max-w-3xl">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="aboutTitle">Sobre</h2>
+                <div id="about-content" class="prose lg:prose-xl text-gray-700 dark:text-gray-300 leading-relaxed">
+                    <p class="mb-4" data-i18n="aboutP1">
+                        Engenheiro de Software especializado em desenvolver, implementar e integrar soluções backend utilizando Java, Kotlin e Spring Boot, acumulando mais de 5 anos de experiência.
+                    </p>
+                    <p class="mb-4" data-i18n="aboutP2">
+                        Minha atuação é sempre orientada por boas práticas de engenharia, sendo TDD (Test-Driven Development) uma metodologia que aplico constantemente para garantir testes automatizados e cobertura de código desde o primeiro commit. Também fui responsável por estruturar pipelines automatizados com GitHub Actions, integrando testes unitários, análise estática de código e validações automatizadas, aumentando significativamente a eficiência das entregas e reduzindo o retrabalho.
+                    </p>
+                    <p class="mb-4" data-i18n="aboutP3">
+                        Uma das minhas experiências mais relevantes foi no Banco PAN, onde contribuí com soluções backend para prevenção de fraudes monetárias e não monetárias. Trabalhei em um ecossistema de microsserviços, com Spring Boot e Quarkus, utilizando Java 8, 17 e 21. Esse ecossistema processa cerca de 400 transações por segundo (TPS), o que exigiu uma forte preocupação com desempenho, resiliência e observabilidade. Dentro desse contexto, desenvolvi e implementei componentes críticos para atender às demandas regulatórias do Banco Central do Brasil (BACEN), garantindo conformidade e segurança. Além disso, participei ativamente de discussões técnicas para otimizar a comunicação entre microsserviços. Um dos meus principais resultados foi a redução do tempo de resposta de uma aplicação de 1400ms para 200ms - uma melhoria de aproximadamente 85% por meio de otimização de código, ajustes de infraestrutura e melhorias em fluxos de comunicação.
+                    </p>
+                    <p class="mb-4" data-i18n="aboutP4">
+                        Além da experiência no setor bancário, tive a oportunidade de liderar tecnicamente um projeto de integração entre um CRM e uma solução de telefonia de um parceiro internacional, enfrentando desafios de integração em tempo real e garantindo a consistência das informações entre sistemas distintos.
+                    </p>
+                    <p data-i18n="aboutP5">
+                        Gosto de trabalhar em equipe, compartilhar conhecimento e contribuir para a evolução contínua dos processos e das soluções onde atuo. Acredito que tecnologia de qualidade é construída com boas práticas, colaboração e inovação constante. Estou sempre aberto a novos desafios e oportunidades onde eu possa agregar valor e continuar evoluindo como engenheiro.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="bg-gray-100 dark:bg-gray-900 section-padding">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="skillsTitle">Minhas Habilidades</h2>
+                <div id="skills-content" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillJavaTitle">Java</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillJavaDesc">Spring Boot, Spring Cloud, Quarkus</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillKotlinTitle">Kotlin</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillKotlinDesc">Ktor, Spring Boot, Exposed</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillMicroservicesTitle">Microsserviços</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillMicroservicesDesc">RESTful APIs, Kafka, RabbitMQ</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillDatabasesTitle">Bancos de Dados</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillDatabasesDesc">PostgreSQL, MySQL, MongoDB, Redis</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillCloudTitle">Cloud & Containers</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillCloudDesc">AWS, Docker, Kubernetes</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillDevOpsTitle">DevOps & CI/CD</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillDevOpsDesc">Git, Jenkins, GitHub Actions, SonarQube</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillTestingTitle">Testes</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillTestingDesc">Testes Unitários, Integração, Cucumber, Mockito</p>
+                    </div>
+                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
+                        <img src="https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" alt="Jira Icon" class="h-12 w-12 mb-2">
+                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillMethodologiesTitle">Metodologias & Outros</h3>
+                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillMethodologiesDesc">Scrum, Kanban, Jira</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="bg-white dark:bg-gray-800 section-padding">
+            <div class="container mx-auto px-4 max-w-9xl">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="experienceTitle">Experiência Profissional</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobNTConsultTitle">Engenheiro de Software Sênior</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobNTConsultCompany">NTConsult</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobNTConsultDuration">abril de 2025 - Present (2 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobNTConsultLocation">Porto Alegre, Rio Grande do Sul, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobNTConsultDesc1">Atuação em projetos de engenharia de software de alto nível.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobCITTitle">Engenheiro de Software Sênior @ Banco Pan</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobCITCompany">CI&T</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobCITDuration">novembro de 2024 - abril de 2025 (6 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobCITLocation">Campinas, São Paulo, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobCITDesc1">Desenvolvimento de soluções backend para prevenção de fraudes monetárias e não monetárias no Banco PAN.</li>
+                                <li data-i18n="jobCITDesc2">Atuação em ecossistema de microsserviços com Spring Boot e Quarkus, utilizando Java 8, 17 e 21 (400 TPS).</li>
+                                <li data-i18n="jobCITDesc3">Implementação de componentes essenciais para demandas do Banco Central do Brasil (BACEN).</li>
+                                <li data-i18n="jobCITDesc4">Otimização do tempo de resposta de aplicações (redução de 1400ms para 200ms - 85%).</li>
+                                <li data-i18n="jobCITDesc5">Foco em segurança e detecção de fraudes em transações bancárias.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasSeniorTitle">Programador Sênior</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasSeniorCompany">GEOvendas</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasSeniorDuration">maio de 2023 - novembro de 2024 (1 ano 7 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasSeniorLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobGEOVendasSeniorDesc1">Atuação na equipe de manutenção das soluções GEOvendas Analytics, Força de Vendas e CRM360.</li>
+                                <li data-i18n="jobGEOVendasSeniorDesc2">Liderança técnica, apoio e orientação a outros desenvolvedores.</li>
+                                <li data-i18n="jobGEOVendasSeniorDesc3">Integrações entre ERPs e sistemas de parceiros, com diversos bancos de dados.</li>
+                                <li data-i18n="jobGEOVendasSeniorDesc4">Desenvolvimento da integração de solução de telefonia ao CRM da GEOvendas com empresa internacional.</li>
+                                <li data-i18n="jobGEOVendasSeniorDesc5">Levantamento de requisitos técnicos para novas demandas.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasPlenoTitle">Programador Pleno</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasPlenoCompany">GEOvendas</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasPlenoDuration">julho de 2022 - abril de 2023 (10 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasPlenoLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobGEOVendasPlenoDesc1">Atuação em projetos-chave: GEOvendas Analytics, Força de Vendas e CRM360.</li>
+                                <li data-i18n="jobGEOVendasPlenoDesc2">Desenvolvimento de soluções de backoffice e ETL com Java, Vaadin, Spring Boot e PostgreSQL.</li>
+                                <li data-i18n="jobGEOVendasPlenoDesc3">Experiência com AngularJS, CoffeeScript, VueJS, JavaScript e .NET Framework para APIs REST.</li>
+                                <li data-i18n="jobGEOVendasPlenoDesc4">Transição para squad de manutenção, ampliando experiência com infraestrutura de servidores, Docker e Jenkins.</li>
+                                <li data-i18n="jobGEOVendasPlenoDesc5">Condução de projeto de projeto de automação de testes unitários (JUnit, Mockito) e pipeline com GitHub Workflow.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasJuniorTitle">Programador Júnior</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasJuniorCompany">GEOvendas</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasJuniorDuration">outubro de 2020 - junho de 2022 (1 ano 9 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasJuniorLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobGEOVendasJuniorDesc1">Trabalho em squads de desenvolvimento com metodologias ágeis (Scrum, Kanban).</li>
+                                <li data-i18n="jobGEOVendasJuniorDesc2">Trabalho diário com Java/Vaadin/Spring Boot/PostgreSQL.</li>
+                                <li data-i18n="jobGEOVendasJuniorDesc3">Desenvolvimento de REST API para o projeto Força de Vendas.</li>
+                                <li data-i18n="jobGEOVendasJuniorDesc4">Experiência com JavaScript (CoffeeScript), AngularJS e CouchDB (NoSQL).</li>
+                                <li data-i18n="jobGEOVendasJuniorDesc5">Contribuição para ferramenta de digitação de pedidos offline com sincronização.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-item-dot"></div>
+                        <div class="timeline-item-content text-gray-800 dark:text-gray-200">
+                            <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasInternTitle">Estagiário em Desenvolvimento</h3>
+                            <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasInternCompany">GEOvendas</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasInternDuration">junho de 2020 - outubro de 2020 (5 meses)</p>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasInternLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
+                            <ul class="list-disc list-inside text-left">
+                                <li data-i18n="jobGEOVendasInternDesc1">Trabalho no GEOvendas Analytics (backoffice e sistema analítico de dados de vendas).</li>
+                                <li data-i18n="jobGEOVendasInternDesc2">Análise de dados de vendas utilizando mapas (Google Maps API) e diversos bancos de dados.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="bg-gray-100 dark:bg-gray-900 section-padding">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="projectsTitle">Meus Projetos</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Order System" alt="Order System" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project1Title">Order System</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project1Desc">Um ecossistema para a emissão e processamento de pedidos</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">Kotlin</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Spring Boot</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">Kafka</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">RavenDB</span>
+                            </div>
+                            <div class="flex justify-end space-x-3">
+                                <a href="https://github.com/gusthawojunkes/order-system" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
+                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Financial+File+Parser" alt="Financial File Parser" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project2Title">Serviço de Processamento de Eventos</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project2Desc">Um serviço backend assíncrono que consome e processa eventos de uma fila de mensagens (Kafka), realizando transformações de dados e persistência.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">Kotlin</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">Ktor</span>
+                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Spring Boot</span>
+                            </div>
+                            <div class="flex justify-end space-x-3">
+                                <a href="https://github.com/seu-usuario/nome-do-seu-projeto-2" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
+                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
+                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Wisegress+API" alt="Wisegress API" class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project3Title">Wisegress API</h3>
+                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project3Desc">API RESTful construída para servir o aplicativo Wisegress</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Java</span>
+                                <span class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Quarkus</span>
+                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">JWT</span>
+                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">PostgreSQL</span>
+                            </div>
+                            <div class="flex justify-end space-x-3">
+                                <a href="https://github.com/gusthawojunkes/wisegress-api" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
+                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="bg-gray-900 text-white section-padding">
+            <div class="container mx-auto px-4 max-w-2xl">
+                <h2 class="text-4xl font-bold text-center mb-12" data-i18n="contactTitle">Entre em Contato</h2>
+                <p class="text-center text-lg mb-8" data-i18n="contactSubtitle">Estou aberto a novas oportunidades e colaborações. Entre em contato através dos links abaixo:</p>
+                <div class="flex justify-center space-x-6">
+                    <a href="https://www.linkedin.com/in/gusthawojunkes" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0A66C2] hover:bg-[#004182] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A66C2] transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        LinkedIn
+                    </a>
+                    <a href="mailto:gusthawo.junkes@gmail.com" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                        </svg>
+                        Email
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-6 text-center">
+        <div class="container mx-auto">
+            <p data-i18n="footerCopyright">&copy; 2025 Gusthawo Junkes. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
