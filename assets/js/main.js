@@ -7,6 +7,7 @@ const translations = {
         navEducation: 'Educação',
         navProjects: 'Projetos',
         navContact: 'Contato',
+        downloadCvButton: 'Currículo',
         heroGreeting: 'Olá, eu sou ',
         heroButton: 'Conheça os meus projetos 👇',
         aboutTitle: 'Sobre',
@@ -124,10 +125,12 @@ const translations = {
         navAbout: 'About',
         navSkills: 'Skills',
         navExperience: 'Experience',
+        navEducation: 'Education',
         navProjects: 'Projects',
         navContact: 'Contact',
-        heroGreeting: 'Hello, I\'m ', // Part of the greeting
+        heroGreeting: 'Hello, I\'m ',
         heroButton: 'Check out my projects 👇',
+        downloadCvButton: 'Curriculum',
         aboutTitle: 'About',
         aboutP1: 'Software Engineer specialized in developing, implementing, and integrating backend solutions using Java, Kotlin, and Spring Boot, with over 5 years of experience.',
         aboutP2: 'My work is always guided by good engineering practices, with TDD (Test-Driven Development) being a methodology I constantly apply to ensure automated tests and code coverage from the first commit. I was also responsible for structuring automated pipelines with GitHub Actions, integrating unit tests, static code analysis, and automated validations, significantly increasing delivery efficiency and reducing rework.',
@@ -274,6 +277,15 @@ function setLanguage(lang) {
     applyTranslations();
     document.getElementById('language-dropdown-content').classList.remove('show');
     document.getElementById('language-dropdown-content-mobile').classList.remove('show');
+
+    const downloadCvButton = document.querySelector('[data-i18n="downloadCvButton"]');
+    if (downloadCvButton) {
+        if (lang === 'pt') {
+            downloadCvButton.href = 'assets/cv/pt-br/GUSTHAWO JUNKES.pdf';
+        } else {
+            downloadCvButton.href = 'assets/cv/en-us/GUSTHAWO JUNKES.pdf';
+        }
+    }
 }
 
 function applyTranslations() {

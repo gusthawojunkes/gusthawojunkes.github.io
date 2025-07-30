@@ -93,7 +93,15 @@ html.dark .text-indigo-800 {
     color: '#a78bfa';
 }
 html.dark .bg-indigo-100 {
-    background-color: '#5a67d8';
+    background-color: #5a67d8;
+}
+
+.bg-secondary-500 {
+    background-color: #6b7280;
+}
+
+.bg-secondary-500:hover {
+    background-color: #4b5563;
 }
 
 /* Timeline specific styles */
