@@ -35,7 +35,7 @@ const translations = {
         experienceTitle: 'Experiência Profissional',
         jobNTConsultTitle: 'Engenheiro de Software Sênior',
         jobNTConsultCompany: 'NTConsult',
-        jobNTConsultDuration: 'abril de 2025 - Presente (2 meses)',
+        jobNTConsultDuration: '',
         jobNTConsultLocation: 'Porto Alegre, Rio Grande do Sul, Brasil',
         jobNTConsultDesc1: 'Atuação em projetos de engenharia de software de alto nível.',
         jobCITTitle: 'Engenheiro de Software Sênior @ Banco Pan',
@@ -126,7 +126,7 @@ const translations = {
         navExperience: 'Experience',
         navProjects: 'Projects',
         navContact: 'Contact',
-        heroGreeting: 'Hello, I\'m ', // Part of the greeting
+        heroGreeting: 'Hello, I\'m ',
         heroButton: 'Check out my projects 👇',
         aboutTitle: 'About',
         aboutP1: 'Software Engineer specialized in developing, implementing, and integrating backend solutions using Java, Kotlin, and Spring Boot, with over 5 years of experience.',
@@ -154,7 +154,7 @@ const translations = {
         experienceTitle: 'Professional Experience',
         jobNTConsultTitle: 'Senior Software Engineer',
         jobNTConsultCompany: 'NTConsult',
-        jobNTConsultDuration: 'April 2025 - Present (2 months)',
+        jobNTConsultDuration: '',
         jobNTConsultLocation: 'Porto Alegre, Rio Grande do Sul, Brazil',
         jobNTConsultDesc1: 'Working on high-level software engineering projects.',
         jobCITTitle: 'Senior Software Engineer @ Banco Pan',
@@ -246,6 +246,51 @@ const dynamicNamesEn = ['Gusthawo Junkes', '@gusthawojunkes', 'gusthawo.junkes']
 let currentNameIndex = 0;
 let nameInterval;
 
+function calculateExperience(startDate) {
+    const start = new Date(startDate);
+    const now = new Date();
+    let years = now.getFullYear() - start.getFullYear();
+    let months = now.getMonth() - start.getMonth();
+
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    if (now.getDate() < start.getDate()) {
+        months--;
+        if (months < 0) {
+            months = 11;
+            years--;
+        }
+    }
+
+    let duration = '';
+    if (currentLanguage === 'pt') {
+        if (years > 0) {
+            duration += `${years} ano${years > 1 ? 's' : ''}`;
+        }
+        if (months >= 0) {
+            if (years > 0) {
+                duration += ' e ';
+            }
+            duration += `${months} mes${months > 1 ? 'es' : ''}`;
+        }
+    } else {
+        if (years > 0) {
+            duration += `${years} year${years > 1 ? 's' : ''}`;
+        }
+        if (months >= 0) {
+            if (years > 0) {
+                duration += ' and ';
+            }
+            duration += `${months} month${months > 1 ? 's' : ''}`;
+        }
+    }
+
+    return duration;
+}
+
 function updateDynamicName() {
     const dynamicNameElement = document.getElementById('dynamic-name');
     if (dynamicNameElement) {
@@ -277,6 +322,10 @@ function setLanguage(lang) {
 }
 
 function applyTranslations() {
+    const experience = calculateExperience('2025-04-01');
+    translations.pt.jobNTConsultDuration = `abril de 2025 - Presente (${experience})`;
+    translations.en.jobNTConsultDuration = `April 2025 - Present (${experience})`;
+
     document.documentElement.lang = currentLanguage;
     document.querySelectorAll('[data-i18n]').forEach(element => {
         const key = element.getAttribute('data-i18n');
