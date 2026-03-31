@@ -1,453 +1,324 @@
 const translations = {
-    'pt': {
-        pageTitle: 'Gusthawo Junkes',
-        navAbout: 'Sobre',
-        navSkills: 'Habilidades',
-        navExperience: 'Experiência',
-        navEducation: 'Educação',
-        navProjects: 'Projetos',
-        navContact: 'Contato',
-        heroGreeting: 'Olá, eu sou ',
-        heroButton: 'Conheça os meus projetos 👇',
-        aboutTitle: 'Sobre',
-        aboutP1: 'Engenheiro de Software especializado em desenvolver, implementar e integrar soluções backend utilizando Java, Kotlin e Spring Boot, acumulando mais de 5 anos de experiência.',
-        aboutP2: 'Minha atuação é sempre orientada por boas práticas de engenharia, sendo TDD (Test-Driven Development) uma metodologia que aplico constantemente para garantir testes automatizados e cobertura de código desde o primeiro commit. Também fui responsável por estruturar pipelines automatizados com GitHub Actions, integrando testes unitários, análise estática de código e validações automatizadas, aumentando significativamente a eficiência das entregas e reduzindo o retrabalho.',
-        aboutP3: 'Uma das minhas experiências mais relevantes foi no Banco PAN, onde contribuí com soluções backend para prevenção de fraudes monetárias e não monetárias. Trabalhei em um ecossistema de microsserviços, com Spring Boot e Quarkus, utilizando Java 8, 17 e 21. Esse ecossistema processa cerca de 400 transações por segundo (TPS), o que exigiu uma forte preocupação com desempenho, resiliência e observabilidade. Dentro desse contexto, desenvolvi e implementei componentes críticos para atender às demandas regulatórias do Banco Central do Brasil (BACEN), garantindo conformidade e segurança. Além disso, participei ativamente de discussões técnicas para otimizar a comunicação entre microsserviços. Um dos meus principais resultados foi a redução do tempo de resposta de uma aplicação de 1400ms para 200ms - uma melhoria de aproximadamente 85% por meio de otimização de código, ajustes de infraestrutura e melhorias em fluxos de comunicação.',
-        aboutP4: 'Além da experiência no setor bancário, tive a oportunidade de liderar tecnicamente um projeto de integração entre um CRM e uma solução de telefonia de um parceiro internacional, enfrentando desafios de integração em tempo real e garantindo a consistência das informações entre sistemas distintos.',
-        aboutP5: 'Gosto de trabalhar em equipe, compartilhar conhecimento e contribuir para a evolução contínua dos processos e das soluções onde atuo. Acredito que tecnologia de qualidade é construída com boas práticas, colaboração e inovação constante. Estou sempre aberto a novos desafios e oportunidades onde eu possa agregar valor e continuar evoluindo como engenheiro.',
-        skillsTitle: 'Minhas Habilidades',
-        skillJavaTitle: 'Java',
-        skillJavaDesc: 'Spring Boot, Spring Cloud, Quarkus',
-        skillKotlinTitle: 'Kotlin',
-        skillKotlinDesc: 'Ktor, Spring Boot, Exposed',
-        skillMicroservicesTitle: 'Microsserviços',
-        skillMicroservicesDesc: 'RESTful APIs, Kafka, RabbitMQ',
-        skillDatabasesTitle: 'Bancos de Dados',
-        skillDatabasesDesc: 'PostgreSQL, MySQL, MongoDB, Redis',
-        skillCloudTitle: 'Cloud & Containers',
-        skillCloudDesc: 'AWS, Docker, Kubernetes',
-        skillDevOpsTitle: 'DevOps & CI/CD',
-        skillDevOpsDesc: 'Git, Jenkins, GitHub Actions, SonarQube',
-        skillTestingTitle: 'Testes',
-        skillTestingDesc: 'Testes Unitários, Integração, Cucumber, Mockito',
-        skillMethodologiesTitle: 'Metodologias & Outros',
-        skillMethodologiesDesc: 'Scrum, Kanban, Jira',
-        experienceTitle: 'Experiência Profissional',
-        jobNTConsultTitle: 'Engenheiro de Software Sênior',
-        jobNTConsultCompany: 'NTConsult',
-        jobNTConsultDuration: '',
-        jobNTConsultLocation: 'Porto Alegre, Rio Grande do Sul, Brasil',
-        jobNTConsultDesc1: 'Atuação em projetos de engenharia de software de alto nível.',
-        jobCITTitle: 'Engenheiro de Software Sênior @ Banco Pan',
-        jobCITCompany: 'CI&T',
-        jobCITDuration: 'novembro de 2024 - abril de 2025 (6 meses)',
-        jobCITLocation: 'Campinas, São Paulo, Brasil',
-        jobCITDesc1: 'Desenvolvimento de soluções backend para prevenção de fraudes monetárias e não monetárias no Banco PAN.',
-        jobCITDesc2: 'Atuação em ecossistema de microsserviços com Spring Boot e Quarkus, utilizando Java 8, 17 e 21 (400 TPS).',
-        jobCITDesc3: 'Implementação de componentes essenciais para demandas do Banco Central do Brasil (BACEN).',
-        jobCITDesc4: 'Otimização do tempo de resposta de aplicações (redução de 1400ms para 200ms - 85%).',
-        jobCITDesc5: 'Foco em segurança e detecção de fraudes em transações bancárias.',
-        jobGEOVendasSeniorTitle: 'Programador Sênior',
-        jobGEOVendasSeniorCompany: 'GEOvendas',
-        jobGEOVendasSeniorDuration: 'maio de 2023 - novembro de 2024 (1 ano 7 meses)',
-        jobGEOVendasSeniorLocation: 'Jaraguá do Sul, Santa Catarina, Brasil',
-        jobGEOVendasSeniorDesc1: 'Atuação na equipe de manutenção das soluções GEOvendas Analytics, Força de Vendas e CRM360.',
-        jobGEOVendasSeniorDesc2: 'Liderança técnica, apoio e orientação a outros desenvolvedores.',
-        jobGEOVendasSeniorDesc3: 'Integrações entre ERPs e sistemas de parceiros, com diversos bancos de dados.',
-        jobGEOVendasSeniorDesc4: 'Desenvolvimento da integração de solução de telefonia ao CRM da GEOvendas com empresa internacional.',
-        jobGEOVendasSeniorDesc5: 'Levantamento de requisitos técnicos para novas demandas.',
-        jobGEOVendasPlenoTitle: 'Programador Pleno',
-        jobGEOVendasPlenoCompany: 'GEOvendas',
-        jobGEOVendasPlenoDuration: 'julho de 2022 - abril de 2023 (10 meses)',
-        jobGEOVendasPlenoLocation: 'Jaraguá do Sul, Santa Catarina, Brasil',
-        jobGEOVendasPlenoDesc1: 'Atuação em projetos-chave: GEOvendas Analytics, Força de Vendas e CRM360.',
-        jobGEOVendasPlenoDesc2: 'Desenvolvimento de soluções de backoffice e ETL com Java, Vaadin, Spring Boot e PostgreSQL.',
-        jobGEOVendasPlenoDesc3: 'Experiência com AngularJS, CoffeeScript, VueJS, JavaScript e .NET Framework para APIs REST.',
-        jobGEOVendasPlenoDesc4: 'Transição para squad de manutenção, ampliando experiência com infraestrutura de servidores, Docker e Jenkins.',
-        jobGEOVendasPlenoDesc5: 'Condução de projeto de projeto de automação de testes unitários (JUnit, Mockito) e pipeline com GitHub Workflow.',
-        jobGEOVendasJuniorTitle: 'Programador Júnior',
-        jobGEOVendasJuniorCompany: 'GEOvendas',
-        jobGEOVendasJuniorDuration: 'outubro de 2020 - junho de 2022 (1 ano 9 meses)',
-        jobGEOVendasJuniorLocation: 'Jaraguá do Sul, Santa Catarina, Brasil',
-        jobGEOVendasJuniorDesc1: 'Trabalho em squads de desenvolvimento com metodologias ágeis (Scrum, Kanban).',
-        jobGEOVendasJuniorDesc2: 'Trabalho diário com Java/Vaadin/Spring Boot/PostgreSQL.',
-        jobGEOVendasJuniorDesc3: 'Desenvolvimento de REST API para o projeto Força de Vendas.',
-        jobGEOVendasJuniorDesc4: 'Experiência com JavaScript (CoffeeScript), AngularJS e CouchDB (NoSQL).',
-        jobGEOVendasJuniorDesc5: 'Contribuição para ferramenta de digitação de pedidos offline com sincronização.',
-        jobGEOVendasInternTitle: 'Estagiário em Desenvolvimento',
-        jobGEOVendasInternCompany: 'GEOvendas',
-        jobGEOVendasInternDuration: 'junho de 2020 - outubro de 2020 (5 meses)',
-        jobGEOVendasInternLocation: 'Jaraguá do Sul, Santa Catarina, Brasil',
-        jobGEOVendasInternDesc1: 'Trabalho no GEOvendas Analytics (backoffice e sistema analítico de dados de vendas).',
-        jobGEOVendasInternDesc2: 'Análise de dados de vendas utilizando mapas (Google Maps API) e diversos bancos de dados.',
-        projectsTitle: 'Meus Projetos',
-        project1Title: 'Order System',
-        project1Desc: 'Um ecossistema para a emissão e processamento de pedidos',
-        project2Title: 'Financial File Parser',
-        project2Desc: 'API para consumir e processar arquivos financeiros de bancos brasileiros 🇧🇷',
-        project3Title: 'Wisegress API',
-        project3Desc: 'API RESTful construída para servir o aplicativo Wisegress',
-        projectsMore: 'Para ver mais dos meus projetos, visite meu perfil no GitHub:',
-        contactTitle: 'Entre em Contato',
-        contactSubtitle: 'Estou aberto a novas oportunidades e colaborações. Sinta-se à vontade para me enviar uma mensagem!',
-        contactNameLabel: 'Seu Nome',
-        contactEmailLabel: 'Seu Email',
-        contactMessageLabel: 'Mensagem',
-        contactSubmitButton: 'Enviar Mensagem',
-        messageBoxTitle: 'Mensagem Enviada!',
-        messageBoxText: 'Obrigado por sua mensagem. Entrarei em contato em breve.',
-        messageBoxClose: 'Fechar',
-        footerCopyright: '&copy; 2025 Gusthawo Junkes. Todos os direitos reservados.',
-        footerLinkedIn: 'LinkedIn',
-        footerGitHub: 'GitHub',
-        footerEmail: 'Email',
-        educationTitle: 'Educação',
-        educationDegree1: 'Informática para Internet',
-        educationInstitution1: 'Curso técnico, SENAI/SC',
-        educationPeriod1: '2018 - 2019',
-        educationDescription1: 'Curso técnico profissionalizante em informática para internet, com foco em desenvolvimento web, lógica de programação e banco de dados.',
-        educationDegree2: 'Engenharia de Software',
-        educationInstitution2: 'Bacharelado, Universidade Católica de Santa Catarina',
-        educationPeriod2: '2020 - 2023',
-        educationDescription2: 'Formação em engenharia de software, com ênfase em desenvolvimento de sistemas, arquitetura de software e metodologias ágeis.',
-        educationDegree3: 'Intercâmbio de idioma',
-        educationInstitution3: 'EC English Centre',
-        educationPeriod3: '2025 - 2025',
-        educationDescription3: 'Intercâmbio focado no aprendizado e aperfeiçoamento da língua inglesa.',
-        educationDegree4: 'Software Architecture',
-        educationInstitution4: 'Pós-graduação, FIAP',
-        educationPeriod4: '2025 - 2026',
-        educationDescription4: 'Pós-graduação focada em arquitetura de software, padrões de design e soluções escaláveis.'
-    },
-    'en': {
-        pageTitle: 'Gusthawo Junkes',
-        navAbout: 'About',
-        navSkills: 'Skills',
-        navExperience: 'Experience',
-        navProjects: 'Projects',
-        navContact: 'Contact',
-        heroGreeting: 'Hello, I\'m ',
-        heroButton: 'Check out my projects 👇',
-        aboutTitle: 'About',
-        aboutP1: 'Software Engineer specialized in developing, implementing, and integrating backend solutions using Java, Kotlin, and Spring Boot, with over 5 years of experience.',
-        aboutP2: 'My work is always guided by good engineering practices, with TDD (Test-Driven Development) being a methodology I constantly apply to ensure automated tests and code coverage from the first commit. I was also responsible for structuring automated pipelines with GitHub Actions, integrating unit tests, static code analysis, and automated validations, significantly increasing delivery efficiency and reducing rework.',
-        aboutP3: 'One of my most relevant experiences was at Banco PAN, where I contributed with backend solutions for preventing monetary and non-monetary fraud. I worked in a microservices ecosystem with Spring Boot and Quarkus, using Java 8, 17, and 21. This ecosystem processes around 400 transactions per second (TPS), which required a strong focus on performance, resilience, and observability. Within this context, I developed and implemented critical components to meet the regulatory demands of the Central Bank of Brazil (BACEN), ensuring compliance and security. Additionally, I actively participated in technical discussions to optimize communication between microservices. One of my main results was reducing an application\'s response time from 1400ms to 200ms - an improvement of approximately 85% through code optimization, infrastructure adjustments, and communication flow enhancements.',
-        aboutP4: 'In addition to my experience in the banking sector, I had the opportunity to technically lead an integration project between a CRM and a telephony solution from an international partner, facing real-time integration challenges and ensuring data consistency between distinct systems.',
-        aboutP5: 'I enjoy working in a team, sharing knowledge, and contributing to the continuous evolution of processes and solutions where I operate. I believe that quality technology is built with good practices, collaboration, and constant innovation. I am always open to new challenges and opportunities where I can add value and continue to grow as an engineer.',
-        skillsTitle: 'My Skills',
-        skillJavaTitle: 'Java',
-        skillJavaDesc: 'Spring Boot, Spring Cloud, Quarkus',
-        skillKotlinTitle: 'Kotlin',
-        skillKotlinDesc: 'Ktor, Spring Boot, Exposed',
-        skillMicroservicesTitle: 'Microservices',
-        skillMicroservicesDesc: 'RESTful APIs, Kafka, RabbitMQ',
-        skillDatabasesTitle: 'Databases',
-        skillDatabasesDesc: 'PostgreSQL, MySQL, MongoDB, Redis',
-        skillCloudTitle: 'Cloud & Containers',
-        skillCloudDesc: 'AWS, Docker, Kubernetes',
-        skillDevOpsTitle: 'DevOps & CI/CD',
-        skillDevOpsDesc: 'Git, Jenkins, GitHub Actions, SonarQube',
-        skillTestingTitle: 'Testing',
-        skillTestingDesc: 'Unit, Integration, Cucumber, Mockito',
-        skillMethodologiesTitle: 'Methodologies & Others',
-        skillMethodologiesDesc: 'Scrum, Kanban, Jira',
-        experienceTitle: 'Professional Experience',
-        jobNTConsultTitle: 'Senior Software Engineer',
-        jobNTConsultCompany: 'NTConsult',
-        jobNTConsultDuration: '',
-        jobNTConsultLocation: 'Porto Alegre, Rio Grande do Sul, Brazil',
-        jobNTConsultDesc1: 'Working on high-level software engineering projects.',
-        jobCITTitle: 'Senior Software Engineer @ Banco Pan',
-        jobCITCompany: 'CI&T',
-        jobCITDuration: 'November 2024 - April 2025 (6 months)',
-        jobCITLocation: 'Campinas, São Paulo, Brazil',
-        jobCITDesc1: 'Developed backend solutions for preventing monetary and non-monetary fraud at Banco PAN.',
-        jobCITDesc2: 'Worked in a microservices ecosystem with Spring Boot and Quarkus, using Java 8, 17, and 21 (400 TPS).',
-        jobCITDesc3: 'Implemented essential components to meet the demands of the Central Bank of Brazil (BACEN).',
-        jobCITDesc4: 'Optimized application response time (reduced from 1400ms to 200ms - 85%).',
-        jobCITDesc5: 'Focused on security and fraud detection in banking transactions.',
-        jobGEOVendasSeniorTitle: 'Senior Programmer',
-        jobGEOVendasSeniorCompany: 'GEOvendas',
-        jobGEOVendasSeniorDuration: 'May 2023 - November 2024 (1 year 7 months)',
-        jobGEOVendasSeniorLocation: 'Jaraguá do Sul, Santa Catarina, Brazil',
-        jobGEOVendasSeniorDesc1: 'Worked mainly on the maintenance team for GEOvendas solutions, focusing on GEOvendas Analytics, Sales Force, and CRM360 platforms.',
-        jobGEOVendasSeniorDesc2: 'Assumed a leadership role, supporting and and guiding other developers in delivering corrective solutions.',
-        jobGEOVendasSeniorDesc3: 'Worked with integrations between ERPs and partner systems, dealing with various databases.',
-        jobGEOVendasSeniorDesc4: 'Developed the integration of a telephony solution to GEOvendas CRM in collaboration with an international company.',
-        jobGEOVendasSeniorDesc5: 'Actively participated in gathering technical requirements for new demands.',
-        jobGEOVendasPlenoTitle: 'Full Programmer',
-        jobGEOVendasPlenoCompany: 'GEOvendas',
-        jobGEOVendasPlenoDuration: 'July 2022 - April 2023 (10 months)',
-        jobGEOVendasPlenoLocation: 'Jaraguá do Sul, Santa Catarina, Brazil',
-        jobGEOVendasPlenoDesc1: 'Worked on key projects: GEOvendas Analytics, Sales Force, and CRM360 (CRM Solution).',
-        jobGEOVendasPlenoDesc2: 'Main experience was in developing backoffice and ETL solutions using Java, Vaadin, Spring Boot, and PostgreSQL.',
-        jobGEOVendasPlenoDesc3: 'Had the opportunity to work on stacks with AngularJS and CoffeeScript, VueJS with JavaScript, and .NET Framework for creating REST APIs.',
-        jobGEOVendasPlenoDesc4: 'Transitioned from the product squad (Scrum and Kanban) to the maintenance squad, expanding experience with server infrastructure, Docker orchestration, and Java application deployment in CI/CD pipelines using Jenkins.',
-        jobGEOVendasPlenoDesc5: 'Led a project from scratch to automate unit tests in GEOvendas Java solutions, using JUnit and Mockito, including a GitHub Workflow verification pipeline.',
-        jobGEOVendasJuniorTitle: 'Junior Programmer',
-        jobGEOVendasJuniorCompany: 'GEOvendas',
-        jobGEOVendasJuniorDuration: 'October 2020 - June 2022 (1 year 9 months)',
-        jobGEOVendasJuniorLocation: 'Jaraguá do Sul, Santa Catarina, Brazil',
-        jobGEOVendasJuniorDesc1: 'Worked on the GEOvendas Analytics and Sales Force projects with a development squad using agile methodologies (Scrum, Kanban).',
-        jobGEOVendasJuniorDesc2: 'Continued working daily with Java/Vaadin/Spring Boot/PostgreSQL.',
-        jobGEOVendasJuniorDesc3: 'Also responsible for developing a REST API for consumption by the Sales Force project.',
-        jobGEOVendasJuniorDesc4: 'Gained experience working with JavaScript (using the CoffeeScript library).',
-        jobGEOVendasJuniorDesc5: 'In this project, worked with the AngularJS framework for solution building and CouchDB (NoSQL) for data persistence. The project itself is a tool for sales representatives to be able to enter orders completely offline, with the possibility of later synchronization.',
-        jobGEOVendasInternTitle: 'Development Intern',
-        jobGEOVendasInternCompany: 'GEOvendas',
-        jobGEOVendasInternDuration: 'June 2020 - October 2020 (5 months)',
-        jobGEOVendasInternLocation: 'Jaraguá do Sul, Santa Catarina, Brazil',
-        jobGEOVendasInternDesc1: 'Worked on GEOvendas Analytics, a product aimed at use as a backoffice and analytical system for sales data from a partner ERP.',
-        educationTitle: 'Education',
-        educationDegree1: 'Internet Computing',
-        educationInstitution1: 'Technical Course, SENAI/SC',
-        educationPeriod1: '2018 - 2019',
-        educationDescription1: 'Professional technical course in internet computing, focusing on web development, programming logic, and databases.',
-        educationDegree2: 'Software Engineering',
-        educationInstitution2: "Bachelor's Degree, Catholic University of Santa Catarina",
-        educationPeriod2: '2020 - 2023',
-        educationDescription2: 'Degree in software engineering, with emphasis on systems development, software architecture, and agile methodologies.',
-        educationDegree3: 'Language Exchange',
-        educationInstitution3: 'EC English Centre',
-        educationPeriod3: '2025 - 2025',
-        educationDescription3: 'Exchange program focused on learning and improving English language skills.',
-        educationDegree4: 'Software Architecture',
-        educationInstitution4: 'Postgraduate Degree, FIAP',
-        educationPeriod4: '2025 - 2026',
-        educationDescription4: 'Postgraduate program focused on software architecture, design patterns, and scalable solutions.',
-        jobGEOVendasInternDesc2: 'In this project, I was able to work with sales data analysis using maps (Google Maps API) and various databases.',
-        projectsTitle: 'My Projects',
-        project1Title: 'Order System',
-        project1Desc: 'An Microsservice Ecosystem for Order Placement and Processing.',
-        project2Title: 'Financial File Parser',
-        project2Desc: 'API for consuming and processing bank statements from Brazilian banks 🇧🇷',
-        project3Title: 'Wisegress API',
-        project3Desc: 'RestFul API built to provide services for the Wisegress application',
-        projectsMore: 'To see more of my projects, visit my GitHub profile:',
-        contactTitle: 'Get in Touch',
-        contactSubtitle: 'I am open to new opportunities and collaborations. Feel free to send me a message!',
-        contactNameLabel: 'Your Name',
-        contactEmailLabel: 'Your Email',
-        contactMessageLabel: 'Message',
-        contactSubmitButton: 'Send Message',
-        messageBoxTitle: 'Message Sent!',
-        messageBoxText: 'Thank you for your message. I will get back to you shortly.',
-        messageBoxClose: 'Close',
-        footerCopyright: '&copy; 2025 Gusthawo Junkes. All rights reserved.',
-        footerLinkedIn: 'LinkedIn',
-        footerGitHub: 'GitHub',
-        footerEmail: 'Email'
-    }
+  pt: {
+    nav_about:      'Sobre',
+    nav_skills:     'Habilidades',
+    nav_experience: 'Experiência',
+    nav_education:  'Formação',
+    nav_projects:   'Projetos',
+    nav_contact:    'Contato',
+
+    hero_greeting:     'Olá, eu sou',
+    hero_role:         'Senior Backend Engineer',
+    hero_tagline:      'Construindo sistemas distribuídos que escalam com Java, Kotlin e microsserviços.',
+    hero_cta_projects: 'Ver projetos',
+    hero_cta_contact:  'Entrar em contato',
+
+    about_title:      'Quem sou eu',
+    about_stat_years: 'anos de experiência',
+    about_stat_perf:  'melhoria de performance',
+    about_stat_tps:   'TPS em produção',
+    about_p1: 'Sou um Engenheiro de Software com mais de 5 anos de experiência construindo sistemas backend de alta performance e alta disponibilidade. Minha especialização está em Java e Kotlin com o ecossistema Spring Boot, projetando arquiteturas de microsserviços para aplicações que operam em escala.',
+    about_p2: 'Tenho experiência em ambientes de alta criticidade, incluindo o setor bancário. No Banco PAN, contribuí com o ecossistema antifraude — um sistema que processa mais de 400 transações por segundo sob regulamentação do Banco Central do Brasil. Nesse contexto, reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms, uma melhoria de 85%.',
+    about_p3: 'Sou defensor de código limpo, testes automatizados e integração contínua. Acredito que software de qualidade vai além da funcionalidade — é sobre manutenibilidade, observabilidade e resiliência que mantêm sistemas confiáveis ao longo do tempo.',
+    about_p4: 'Atualmente cursando pós-graduação em Arquitetura de Software na FIAP, continuo aprofundando meu conhecimento em padrões arquiteturais, design cloud-native e sistemas distribuídos.',
+
+    skills_title:           'Stack técnica',
+    skill_java_desc:         'Spring Boot, Spring Cloud, Quarkus',
+    skill_kotlin_desc:       'Ktor, Coroutines, Exposed',
+    skill_microservices:     'Microsserviços',
+    skill_microservices_desc:'RESTful APIs, Kafka, RabbitMQ',
+    skill_databases:         'Bancos de Dados',
+    skill_databases_desc:    'PostgreSQL, MySQL, MongoDB, Redis',
+    skill_cloud:             'Cloud & Containers',
+    skill_cloud_desc:        'AWS, Docker, Kubernetes',
+    skill_devops_desc:       'GitHub Actions, Jenkins, SonarQube',
+    skill_testing:           'Testes',
+    skill_testing_desc:      'Unitários, Integração, Cucumber, Mockito',
+    skill_methodologies:     'Metodologias',
+    skill_methodologies_desc:'Scrum, Kanban, DDD, TDD',
+
+    experience_title: 'Trajetória profissional',
+
+    exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
+    exp_ntconsult_period_label: 'Abril 2025 — Presente',
+    exp_ntconsult_desc:         'Atuação no desenvolvimento de soluções de software orientadas a microsserviços, com foco em qualidade, escalabilidade e boas práticas de engenharia.',
+
+    exp_ciandt_role:   'Engenheiro de Software Sênior · Banco PAN',
+    exp_ciandt_period: 'Novembro 2024 — Abril 2025 · 6 meses',
+    exp_ciandt_desc:   'Atuei no ecossistema antifraude do Banco PAN, desenvolvendo microsserviços que processam mais de 400 TPS sob regulamentação do Banco Central do Brasil. Reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms — melhoria de 85%.',
+
+    exp_geo_senior_role:   'Programador Sênior',
+    exp_geo_senior_period: 'Maio 2023 — Novembro 2024 · 1a 7m',
+    exp_geo_senior_desc:   'Liderança técnica em projetos de modernização para arquitetura de microsserviços com Kotlin e Spring Boot. Responsável por design de APIs, revisão de código e integração com sistemas de parceiros internacionais.',
+
+    exp_geo_full_role:   'Programador Pleno',
+    exp_geo_full_period: 'Julho 2022 — Abril 2023 · 10 meses',
+    exp_geo_full_desc:   'Desenvolvimento e manutenção de APIs RESTful, testes automatizados com JUnit e Mockito, e pipelines de CI/CD com Jenkins e GitHub Actions.',
+
+    exp_geo_junior_role:   'Programador Júnior',
+    exp_geo_junior_period: 'Outubro 2020 — Junho 2022 · 1a 9m',
+    exp_geo_junior_desc:   'Desenvolvimento de funcionalidades e APIs REST no ecossistema de vendas com Java, Spring Boot e PostgreSQL. Participação em squads ágeis com Scrum e Kanban.',
+
+    exp_geo_intern_role:   'Estagiário de Desenvolvimento',
+    exp_geo_intern_period: 'Junho 2020 — Outubro 2020 · 5 meses',
+    exp_geo_intern_desc:   'Início da trajetória profissional com apoio no desenvolvimento do GEOvendas Analytics e aprendizado das bases da engenharia de software em ambiente produtivo.',
+
+    education_title:  'Educação',
+    edu_fiap_level:   'Pós-Graduação',
+    edu_fiap_course:  'Arquitetura de Software',
+    edu_fiap_period:  '2025 — 2026',
+    edu_ec_level:     'Intercâmbio',
+    edu_ec_course:    'Língua Inglesa',
+    edu_ec_period:    '2025',
+    edu_ucsc_level:   'Bacharelado',
+    edu_ucsc_course:  'Engenharia de Software',
+    edu_ucsc_period:  '2020 — 2023',
+    edu_senai_level:  'Técnico',
+    edu_senai_course: 'Informática para Internet',
+    edu_senai_period: '2018 — 2019',
+
+    projects_title:   'Projetos pessoais',
+    proj_order_name:  'Order System',
+    proj_order_desc:  'Ecossistema de microsserviços para processamento de pedidos com comunicação assíncrona via Kafka e persistência em RavenDB.',
+    proj_parser_name: 'Financial File Parser',
+    proj_parser_desc: 'Biblioteca para parse e processamento de arquivos financeiros nos padrões OFX e CNAB, com suporte a múltiplos formatos bancários brasileiros.',
+    proj_wisegress_name: 'Wisegress API',
+    proj_wisegress_desc: 'API REST para gerenciamento de metas e hábitos com autenticação JWT, persistência em PostgreSQL e arquitetura limpa usando Quarkus.',
+
+    contact_eyebrow:   'Vamos conversar',
+    contact_title:     'Pronto para colaborar?',
+    contact_desc:      'Estou aberto a novas oportunidades e desafios. Se você tem um projeto interessante ou uma vaga que faça sentido, me chame.',
+    contact_email_btn: 'Enviar e-mail',
+
+    // Footer
+    footer_copy: '© 2025 Gusthawo Junkes. Todos os direitos reservados.',
+    footer_made: 'Feito com precisão e café ☕',
+  },
+
+  en: {
+    nav_about:      'About',
+    nav_skills:     'Skills',
+    nav_experience: 'Experience',
+    nav_education:  'Education',
+    nav_projects:   'Projects',
+    nav_contact:    'Contact',
+
+    hero_greeting:     "Hi, I'm",
+    hero_role:         'Senior Backend Engineer',
+    hero_tagline:      'Building distributed systems that scale with Java, Kotlin, and microservices.',
+    hero_cta_projects: 'View projects',
+    hero_cta_contact:  'Get in touch',
+
+    about_title:      'About me',
+    about_stat_years: 'years of experience',
+    about_stat_perf:  'performance improvement',
+    about_stat_tps:   'TPS in production',
+    about_p1: "I'm a Software Engineer with 5+ years of experience building high-performance, high-availability backend systems. My expertise centers on Java and Kotlin within the Spring Boot ecosystem, designing microservice architectures for applications that operate at scale.",
+    about_p2: "I've worked in high-stakes environments, including the banking sector. At Banco PAN, I contributed to the anti-fraud ecosystem — a system processing over 400 transactions per second under Brazil's Central Bank regulations. In that role, I reduced critical service response times from 1,400ms to 200ms, an 85% improvement.",
+    about_p3: 'I advocate for clean code, automated testing, and continuous integration. I believe quality software goes beyond functionality — it\'s about the maintainability, observability, and resilience that keeps systems reliable over time.',
+    about_p4: 'Currently pursuing a postgraduate degree in Software Architecture at FIAP, I continue deepening my knowledge of architectural patterns, cloud-native design, and distributed systems.',
+
+    skills_title:           'Tech stack',
+    skill_java_desc:         'Spring Boot, Spring Cloud, Quarkus',
+    skill_kotlin_desc:       'Ktor, Coroutines, Exposed',
+    skill_microservices:     'Microservices',
+    skill_microservices_desc:'RESTful APIs, Kafka, RabbitMQ',
+    skill_databases:         'Databases',
+    skill_databases_desc:    'PostgreSQL, MySQL, MongoDB, Redis',
+    skill_cloud:             'Cloud & Containers',
+    skill_cloud_desc:        'AWS, Docker, Kubernetes',
+    skill_devops_desc:       'GitHub Actions, Jenkins, SonarQube',
+    skill_testing:           'Testing',
+    skill_testing_desc:      'Unit, Integration, Cucumber, Mockito',
+    skill_methodologies:     'Methodologies',
+    skill_methodologies_desc:'Scrum, Kanban, DDD, TDD',
+
+    experience_title: 'Career timeline',
+
+    exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
+    exp_ntconsult_period_label: 'April 2025 — Present',
+    exp_ntconsult_desc:         'Working on microservices-oriented software solutions with a focus on quality, scalability, and engineering best practices.',
+
+    exp_ciandt_role:   'Senior Software Engineer · Banco PAN',
+    exp_ciandt_period: 'November 2024 — April 2025 · 6 months',
+    exp_ciandt_desc:   "Worked on Banco PAN's anti-fraud ecosystem, developing microservices that handle 400+ TPS under Brazil's Central Bank regulations. Reduced critical service response times from 1,400ms to 200ms — an 85% improvement.",
+
+    exp_geo_senior_role:   'Senior Developer',
+    exp_geo_senior_period: 'May 2023 — November 2024 · 1y 7m',
+    exp_geo_senior_desc:   'Technical leadership on modernization projects migrating to microservices architecture using Kotlin and Spring Boot. Responsible for API design decisions, code review, and integration with international partner systems.',
+
+    exp_geo_full_role:   'Mid-level Developer',
+    exp_geo_full_period: 'July 2022 — April 2023 · 10 months',
+    exp_geo_full_desc:   'Development and maintenance of RESTful APIs, automated testing with JUnit and Mockito, and CI/CD pipeline setup with Jenkins and GitHub Actions.',
+
+    exp_geo_junior_role:   'Junior Developer',
+    exp_geo_junior_period: 'October 2020 — June 2022 · 1y 9m',
+    exp_geo_junior_desc:   'Feature development and REST API work in the sales ecosystem using Java, Spring Boot, and PostgreSQL. Active participation in agile squads with Scrum and Kanban.',
+
+    exp_geo_intern_role:   'Development Intern',
+    exp_geo_intern_period: 'June 2020 — October 2020 · 5 months',
+    exp_geo_intern_desc:   'Began professional career supporting the development of GEOvendas Analytics and learning software engineering foundations in a production environment.',
+
+    education_title:  'Education',
+    edu_fiap_level:   'Postgraduate',
+    edu_fiap_course:  'Software Architecture',
+    edu_fiap_period:  '2025 — 2026',
+    edu_ec_level:     'Language Exchange',
+    edu_ec_course:    'English Language',
+    edu_ec_period:    '2025',
+    edu_ucsc_level:   "Bachelor's Degree",
+    edu_ucsc_course:  'Software Engineering',
+    edu_ucsc_period:  '2020 — 2023',
+    edu_senai_level:  'Technical Course',
+    edu_senai_course: 'Internet Computing',
+    edu_senai_period: '2018 — 2019',
+
+    projects_title:   'Personal projects',
+    proj_order_name:  'Order System',
+    proj_order_desc:  'A microservices ecosystem for order placement and processing, with async communication via Kafka and persistence in RavenDB.',
+    proj_parser_name: 'Financial File Parser',
+    proj_parser_desc: 'A library for parsing and processing financial files in OFX and CNAB formats, with support for multiple Brazilian banking standards.',
+    proj_wisegress_name: 'Wisegress API',
+    proj_wisegress_desc: 'A REST API for goals and habits management with JWT authentication, PostgreSQL persistence, and clean architecture built on Quarkus.',
+
+    contact_eyebrow:   "Let's talk",
+    contact_title:     'Ready to collaborate?',
+    contact_desc:      "I'm open to new opportunities and challenges. If you have an interesting project or a role that fits, reach out.",
+    contact_email_btn: 'Send an email',
+
+    // Footer
+    footer_copy: '© 2025 Gusthawo Junkes. All rights reserved.',
+    footer_made: 'Built with precision and coffee ☕',
+  }
 };
 
 let currentLanguage = localStorage.getItem('language') || 'pt';
-const dynamicNames = ['Gusthawo Junkes', '@gusthawojunkes', 'gusthawo.junkes'];
-const dynamicNamesEn = ['Gusthawo Junkes', '@gusthawojunkes', 'gusthawo.junkes'];
-let currentNameIndex = 0;
-let nameInterval;
 
 function calculateExperience(startDate) {
-    const start = new Date(startDate);
-    const now = new Date();
-    let years = now.getFullYear() - start.getFullYear();
-    let months = now.getMonth() - start.getMonth();
+  const start = new Date(startDate);
+  const now   = new Date();
+  let years  = now.getFullYear() - start.getFullYear();
+  let months = now.getMonth()    - start.getMonth();
 
-    if (months < 0) {
-        years--;
-        months += 12;
-    }
+  if (months < 0) { years--; months += 12; }
+  if (now.getDate() < start.getDate()) {
+    months--;
+    if (months < 0) { months = 11; years--; }
+  }
 
-    if (now.getDate() < start.getDate()) {
-        months--;
-        if (months < 0) {
-            months = 11;
-            years--;
-        }
-    }
-
-    let duration = '';
-    if (currentLanguage === 'pt') {
-        if (years > 0) {
-            duration += `${years} ano${years > 1 ? 's' : ''}`;
-        }
-        if (months >= 0) {
-            if (years > 0) {
-                duration += ' e ';
-            }
-            duration += `${months} mes${months > 1 ? 'es' : ''}`;
-        }
-    } else {
-        if (years > 0) {
-            duration += `${years} year${years > 1 ? 's' : ''}`;
-        }
-        if (months >= 0) {
-            if (years > 0) {
-                duration += ' and ';
-            }
-            duration += `${months} month${months > 1 ? 's' : ''}`;
-        }
-    }
-
-    return duration;
+  if (currentLanguage === 'pt') {
+    const y = years  > 0 ? `${years} ano${years  > 1 ? 's' : ''}` : '';
+    const m = months > 0 ? `${months} ${months > 1 ? 'meses' : 'mês'}` : '';
+    return [y, m].filter(Boolean).join(' e ');
+  } else {
+    const y = years  > 0 ? `${years} year${years  > 1 ? 's' : ''}` : '';
+    const m = months > 0 ? `${months} month${months > 1 ? 's' : ''}` : '';
+    return [y, m].filter(Boolean).join(' and ');
+  }
 }
 
-function updateDynamicName() {
-    const dynamicNameElement = document.getElementById('dynamic-name');
-    if (dynamicNameElement) {
-        const namesArray = currentLanguage === 'pt' ? dynamicNames : dynamicNamesEn;
-        dynamicNameElement.textContent = namesArray[currentNameIndex];
-        currentNameIndex = (currentNameIndex + 1) % namesArray.length;
-    }
-}
-
-function updateFlags(lang) {
-    const currentFlag = document.getElementById('current-flag');
-    const currentFlagMobile = document.getElementById('current-flag-mobile');
-    if (lang === 'pt') {
-        currentFlag.src = './assets/icons/flag-br.svg';
-        currentFlagMobile.src = './assets/icons/flag-br.svg';
-    } else {
-        currentFlag.src = './assets/icons/flag-us.svg';
-        currentFlagMobile.src = './assets/icons/flag-us.svg';
-    }
-}
-
-function setLanguage(lang) {
-    currentLanguage = lang;
-    localStorage.setItem('language', currentLanguage);
-    updateFlags(currentLanguage);
-    applyTranslations();
-    document.getElementById('language-dropdown-content').classList.remove('show');
-    document.getElementById('language-dropdown-content-mobile').classList.remove('show');
+function updateNTConsultDuration() {
+  const el = document.getElementById('ntconsult-duration');
+  if (el) el.textContent = calculateExperience('2025-04-01');
 }
 
 function applyTranslations() {
-    const experience = calculateExperience('2025-04-01');
-    translations.pt.jobNTConsultDuration = `abril de 2025 - Presente (${experience})`;
-    translations.en.jobNTConsultDuration = `April 2025 - Present (${experience})`;
-
-    document.documentElement.lang = currentLanguage;
-    document.querySelectorAll('[data-i18n]').forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[currentLanguage][key]) {
-            if (key === 'heroGreeting') {
-                element.innerHTML = translations[currentLanguage][key];
-            } else {
-                element.textContent = translations[currentLanguage][key];
-            }
-        }
-    });
-    clearInterval(nameInterval);
-    currentNameIndex = 0;
-    updateDynamicName();
-    nameInterval = setInterval(updateDynamicName, 3000);
+  document.documentElement.lang = currentLanguage;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    const val = translations[currentLanguage][key];
+    if (val !== undefined) el.textContent = val;
+  });
+  updateNTConsultDuration();
 }
 
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href');
-        const targetElement = document.querySelector(targetId);
-        const headerOffset = 80;
-        const elementPosition = targetElement.getBoundingClientRect().top;
-        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
-        window.scrollTo({ top: offsetPosition, behavior: "smooth" });
-        if (mobileMenu.classList.contains('flex')) {
-            mobileMenu.classList.add('hidden');
-            mobileMenu.classList.remove('flex');
-        }
-    });
-});
+function updateLangUI(lang) {
+  const flag = document.getElementById('current-flag');
+  const code = document.getElementById('current-lang-code');
+  if (flag) flag.src = lang === 'pt' ? 'assets/icons/flag-br.svg' : 'assets/icons/flag-us.svg';
+  if (code) code.textContent = lang.toUpperCase();
+}
 
-const menuButton = document.getElementById('menu-button');
-const closeMenuButton = document.getElementById('close-menu-button');
-const mobileMenu = document.getElementById('mobile-menu');
-const mobileMenuLinks = mobileMenu.querySelectorAll('[data-menu-link]');
-menuButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-    mobileMenu.classList.toggle('flex');
-});
-closeMenuButton.addEventListener('click', () => {
-    mobileMenu.classList.add('hidden');
-    mobileMenu.classList.remove('flex');
-});
-mobileMenuLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-        mobileMenu.classList.remove('flex');
-    });
-});
+function setLanguage(lang) {
+  currentLanguage = lang;
+  localStorage.setItem('language', lang);
+  updateLangUI(lang);
+  applyTranslations();
+  closeLangDropdown();
+}
 
-const themeToggleBtn = document.getElementById('theme-toggle');
-const themeToggleBtnMobile = document.getElementById('theme-toggle-mobile');
-const sunIcon = document.getElementById('sun-icon');
-const moonIcon = document.getElementById('moon-icon');
-const sunIconMobile = document.getElementById('sun-icon-mobile');
-const moonIconMobile = document.getElementById('moon-icon-mobile');
+function closeLangDropdown() {
+  document.getElementById('lang-sw').classList.remove('open');
+}
+
 function setTheme(theme) {
-    if (theme === 'dark') {
-        document.documentElement.classList.add('dark');
-        sunIcon.classList.remove('hidden');
-        moonIcon.classList.add('hidden');
-        sunIconMobile.classList.remove('hidden');
-        moonIconMobile.classList.add('hidden');
-    } else {
-        document.documentElement.classList.remove('dark');
-        sunIcon.classList.add('hidden');
-        moonIcon.classList.remove('hidden');
-        sunIconMobile.classList.add('hidden');
-        moonIconMobile.classList.remove('hidden');
-    }
-    localStorage.setItem('theme', theme);
+  const sunIcon  = document.getElementById('sun-icon');
+  const moonIcon = document.getElementById('moon-icon');
+  if (theme === 'dark') {
+    document.documentElement.classList.remove('light');
+    sunIcon.classList.remove('hidden');
+    moonIcon.classList.add('hidden');
+  } else {
+    document.documentElement.classList.add('light');
+    sunIcon.classList.add('hidden');
+    moonIcon.classList.remove('hidden');
+  }
+  localStorage.setItem('theme', theme);
 }
-const savedTheme = localStorage.getItem('theme') || (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-setTheme(savedTheme);
-themeToggleBtn.addEventListener('click', () => {
-    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-});
-themeToggleBtnMobile.addEventListener('click', () => {
-    const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
-    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-});
 
-const languageDropdownButton = document.getElementById('language-dropdown-button');
-const languageDropdownContent = document.getElementById('language-dropdown-content');
-const languageDropdownButtonMobile = document.getElementById('language-dropdown-button-mobile');
-const languageDropdownContentMobile = document.getElementById('language-dropdown-content-mobile');
-languageDropdownButton.addEventListener('click', (event) => {
-    event.stopPropagation();
-    languageDropdownContent.classList.toggle('show');
-});
-languageDropdownButtonMobile.addEventListener('click', (event) => {
-    event.stopPropagation();
-    languageDropdownContentMobile.classList.toggle('show');
-});
-window.addEventListener('click', (event) => {
-    if (!event.target.closest('.language-dropdown')) {
-        if (languageDropdownContent.classList.contains('show')) {
-            languageDropdownContent.classList.remove('show');
-        }
-        if (languageDropdownContentMobile.classList.contains('show')) {
-            languageDropdownContentMobile.classList.remove('show');
-        }
-    }
-});
-document.querySelectorAll('.language-dropdown-content button').forEach(button => {
-    button.addEventListener('click', (event) => {
-        const lang = event.currentTarget.getAttribute('data-lang');
-        const flagPath = lang === 'pt' ? './assets/icons/flag-br.svg' : './assets/icons/flag-us.svg';
-        document.getElementById('current-flag').src = flagPath;
-        document.getElementById('current-flag-mobile').src = flagPath;
-        setLanguage(lang);
-    });
-});
 document.addEventListener('DOMContentLoaded', () => {
-    const savedLanguage = localStorage.getItem('language') || 'pt';
-    const flagPath = savedLanguage === 'pt' ? './assets/icons/flag-br.svg' : './assets/icons/flag-us.svg';
-    document.getElementById('current-flag').src = flagPath;
-    document.getElementById('current-flag-mobile').src = flagPath;
-    setLanguage(savedLanguage);
+  const savedTheme = localStorage.getItem('theme') || 'dark';
+  setTheme(savedTheme);
+
+  const savedLang = localStorage.getItem('language') || 'pt';
+  currentLanguage = savedLang;
+  updateLangUI(savedLang);
+  applyTranslations();
+
+  document.getElementById('theme-toggle').addEventListener('click', () => {
+    const isDark = !document.documentElement.classList.contains('light');
+    setTheme(isDark ? 'light' : 'dark');
+  });
+
+  const langSw      = document.getElementById('lang-sw');
+  const langBtn     = document.getElementById('lang-btn');
+  const langDropdown = document.getElementById('lang-dropdown');
+
+  langBtn.addEventListener('click', e => {
+    e.stopPropagation();
+    langSw.classList.toggle('open');
+  });
+  window.addEventListener('click', e => {
+    if (!e.target.closest('#lang-sw')) closeLangDropdown();
+  });
+
+  const mobileToggle = document.getElementById('mobile-toggle');
+  const mobileNav    = document.getElementById('mobile-nav');
+  const menuIcon     = document.getElementById('menu-icon');
+  const closeIcon    = document.getElementById('close-icon');
+
+  mobileToggle.addEventListener('click', () => {
+    const isOpen = mobileNav.classList.toggle('open');
+    menuIcon.classList.toggle('hidden', isOpen);
+    closeIcon.classList.toggle('hidden', !isOpen);
+  });
+
+  document.querySelectorAll('[data-menu-link]').forEach(link => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('open');
+      menuIcon.classList.remove('hidden');
+      closeIcon.classList.add('hidden');
+    });
+  });
+
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', e => {
+      const target = document.querySelector(anchor.getAttribute('href'));
+      if (!target) return;
+      e.preventDefault();
+      const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 66;
+      const top = target.getBoundingClientRect().top + window.pageYOffset - offset;
+      window.scrollTo({ top, behavior: 'smooth' });
+    });
+  });
 });

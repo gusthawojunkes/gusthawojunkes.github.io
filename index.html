@@ -1,421 +1,607 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-    <meta http-equiv="Pragma" content="no-cache">
-    <meta http-equiv="Expires" content="0">
-    <title data-i18n="pageTitle">Gusthawo Junkes</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    colors: {
-                        primary: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            200: '#bfdbfe',
-                            300: '#93c5fd',
-                            400: '#60a5fa',
-                            500: '#3b82f6', // Main blue
-                            600: '#2563eb',
-                            700: '#1d4ed8',
-                            800: '#1e40af',
-                            900: '#1e3a8a',
-                            950: '#172554',
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-    <link rel="icon" type="image/png" href="https://placehold.co/48x48/3b82f6/FFFFFF?text=GJ">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <meta name="description" content="Gusthawo Junkes — Senior Backend Engineer especializado em Java, Kotlin e sistemas distribuídos." />
+  <title>Gusthawo Junkes — Senior Software Engineer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body class="bg-gray-50 text-gray-800 dark:bg-gray-900 dark:text-gray-100">
+<body>
 
-    <header class="bg-gray-900 text-white p-4 shadow-lg fixed w-full z-10 top-0">
-        <div class="container mx-auto flex justify-between items-center">
-            <a href="#hero" class="text-2xl font-bold rounded-md px-3 py-1 hover:bg-gray-700 transition-colors">Gusthawo Junkes</a>
-            <nav class="hidden md:flex space-x-6 items-center">
-                <a href="#about" class="hover:text-primary-400 transition-colors" data-i18n="navAbout">Sobre</a>
-                <a href="#skills" class="hover:text-primary-400 transition-colors" data-i18n="navSkills">Habilidades</a>
-                <a href="#experience" class="hover:text-primary-400 transition-colors" data-i18n="navExperience">Experiência</a>
-                <a href="#education" class="hover:text-primary-400 transition-colors" data-i18n="navEducation">Educação</a>
-                <a href="#projects" class="hover:text-primary-400 transition-colors" data-i18n="navProjects">Projetos</a>
-                <a href="#contact" class="hover:text-primary-400 transition-colors" data-i18n="navContact">Contato</a>
-                <button id="theme-toggle" class="ml-4 p-2 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
-                    <img id="sun-icon" src="assets/icons/sun.svg" class="w-6 h-6 text-yellow-400 hidden" alt="Light mode">
-                    <img id="moon-icon" src="assets/icons/moon.svg" class="w-6 h-6 text-gray-300" alt="Dark mode">
-                </button>
-                <div class="language-dropdown ml-2">
-                    <button id="language-dropdown-button" class="p-2 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
-                        <img id="current-flag" src="./assets/icons/flag-br.svg" alt="Current Language Flag" class="flag-icon">
-                    </button>
-                    <div id="language-dropdown-content" class="language-dropdown-content">
-                        <button data-lang="pt" class="w-full language-option">
-                            <img src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
-                        </button>
-                        <button data-lang="en" class="w-full language-option">
-                            <img src="./assets/icons/flag-us.svg" alt="USA Flag" class="flag-icon">
-                        </button>
-                    </div>
-                </div>
-            </nav>
-            <button id="menu-button" class="md:hidden text-white focus:outline-none">
-                <img src="assets/icons/menu.svg" class="w-6 h-6" alt="Menu">
-            </button>
+<!-- ===================== NAV ===================== -->
+<header class="nav" id="nav">
+  <div class="nav__inner">
+    <a href="#hero" class="nav__logo">
+      <span class="nav__logo-mark">GJ</span>
+      <span class="nav__logo-text">Gusthawo Junkes</span>
+    </a>
+
+    <nav class="nav__links">
+      <a href="#about"      class="nav__link" data-i18n="nav_about">Sobre</a>
+      <a href="#skills"     class="nav__link" data-i18n="nav_skills">Habilidades</a>
+      <a href="#experience" class="nav__link" data-i18n="nav_experience">Experiência</a>
+      <a href="#education"  class="nav__link" data-i18n="nav_education">Formação</a>
+      <a href="#projects"   class="nav__link" data-i18n="nav_projects">Projetos</a>
+      <a href="#contact"    class="nav__link" data-i18n="nav_contact">Contato</a>
+    </nav>
+
+    <div class="nav__controls">
+      <div class="lang-sw" id="lang-sw">
+        <button class="lang-sw__btn" id="lang-btn" aria-label="Switch language">
+          <img src="assets/icons/flag-br.svg" alt="" class="lang-sw__flag" id="current-flag" />
+          <span class="lang-sw__code" id="current-lang-code">PT</span>
+          <svg class="lang-sw__chevron" width="10" height="10" viewBox="0 0 10 10" fill="none">
+            <path d="M2 3.5l3 3 3-3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </button>
+        <div class="lang-sw__dropdown" id="lang-dropdown">
+          <button class="lang-sw__option" onclick="setLanguage('pt')">
+            <img src="assets/icons/flag-br.svg" alt="" class="lang-sw__flag" /> Português
+          </button>
+          <button class="lang-sw__option" onclick="setLanguage('en')">
+            <img src="assets/icons/flag-us.svg" alt="" class="lang-sw__flag" /> English
+          </button>
         </div>
-        <div id="mobile-menu" class="hidden md:hidden fixed inset-0 bg-gray-900 bg-opacity-95 z-20 flex flex-col items-center justify-center space-y-8 text-3xl">
-            <button id="close-menu-button" class="absolute top-4 right-4 text-white">
-                <img src="assets/icons/close.svg" class="w-8 h-8" alt="Close menu">
-            </button>
-            <a href="#about" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navAbout">Sobre</a>
-            <a href="#skills" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navSkills">Habilidades</a>
-            <a href="#experience" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navExperience">Experiência</a>
-            <a href="#education" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navEducation">Educação</a>
-            <a href="#projects" class="text-white hover:text-primary-400 transition-colors" data-menu-link data-i18n="navProjects">Projetos</a>
-            <a href="#contact" class="hover:text-primary-400 transition-colors" data-menu-link data-i18n="navContact">Contato</a>
-            <button id="theme-toggle-mobile" class="mt-8 p-3 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
-                <img id="sun-icon-mobile" src="assets/icons/sun.svg" class="w-8 h-8 text-yellow-400 hidden" alt="Light mode">
-                <img id="moon-icon-mobile" src="assets/icons/moon.svg" class="w-8 h-8 text-gray-300" alt="Dark mode">
-            </button>
-            <div class="language-dropdown mt-4">
-                <button id="language-dropdown-button-mobile" class="p-3 rounded-lg bg-gray-700 hover:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-primary-400 transition-colors">
-                    <img id="current-flag-mobile" src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
-                </button>
-                <div id="language-dropdown-content-mobile" class="language-dropdown-content">
-                    <button data-lang="pt" class="w-full">
-                        <img src="./assets/icons/flag-br.svg" alt="Brazil Flag" class="flag-icon">
-                    </button>
-                    <button data-lang="en" class="w-full">
-                        <img src="./assets/icons/flag-us.svg" alt="USA Flag" class="flag-icon">
-                    </button>
-                </div>
-            </div>
+      </div>
+
+      <button class="theme-btn" id="theme-toggle" aria-label="Toggle theme">
+        <svg id="sun-icon" class="theme-btn__icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="5"/>
+          <line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+          <line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+        </svg>
+        <svg id="moon-icon" class="theme-btn__icon hidden" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+        </svg>
+      </button>
+
+      <button class="mobile-btn" id="mobile-toggle" aria-label="Open menu">
+        <svg id="menu-icon" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M2.5 5.5h15M2.5 10h15M2.5 14.5h15" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+        <svg id="close-icon" class="hidden" width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M4 4l12 12M16 4L4 16" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <a href="#about"      class="mobile-nav__link" data-i18n="nav_about"      data-menu-link>Sobre</a>
+    <a href="#skills"     class="mobile-nav__link" data-i18n="nav_skills"     data-menu-link>Habilidades</a>
+    <a href="#experience" class="mobile-nav__link" data-i18n="nav_experience" data-menu-link>Experiência</a>
+    <a href="#education"  class="mobile-nav__link" data-i18n="nav_education"  data-menu-link>Formação</a>
+    <a href="#projects"   class="mobile-nav__link" data-i18n="nav_projects"   data-menu-link>Projetos</a>
+    <a href="#contact"    class="mobile-nav__link" data-i18n="nav_contact"    data-menu-link>Contato</a>
+  </div>
+</header>
+
+<!-- ===================== HERO ===================== -->
+<section id="hero" class="hero">
+  <div class="hero__bg" aria-hidden="true">
+    <div class="hero__grid"></div>
+    <div class="hero__glow hero__glow--a"></div>
+    <div class="hero__glow hero__glow--b"></div>
+  </div>
+
+  <div class="hero__wrap">
+    <div class="hero__content">
+      <p class="hero__eyebrow">
+        <span data-i18n="hero_greeting">Olá, eu sou</span>
+      </p>
+      <h1 class="hero__name" id="hero-name">Gusthawo Junkes</h1>
+      <p class="hero__role" data-i18n="hero_role">Senior Backend Engineer</p>
+      <p class="hero__tagline" data-i18n="hero_tagline">
+        Construindo sistemas distribuídos que escalam com Java, Kotlin e microsserviços.
+      </p>
+
+      <div class="hero__stack">
+        <span class="stack-pill">Java</span>
+        <span class="stack-pill">Kotlin</span>
+        <span class="stack-pill">Spring Boot</span>
+        <span class="stack-pill">Kafka</span>
+        <span class="stack-pill">AWS</span>
+        <span class="stack-pill">Docker</span>
+      </div>
+
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn--gold"    data-i18n="hero_cta_projects">Ver projetos</a>
+        <a href="#contact"  class="btn btn--outline" data-i18n="hero_cta_contact">Entrar em contato</a>
+      </div>
+    </div>
+
+    <div class="hero__visual" aria-hidden="true">
+      <div class="code-win">
+        <div class="code-win__bar">
+          <span class="code-win__dot code-win__dot--r"></span>
+          <span class="code-win__dot code-win__dot--y"></span>
+          <span class="code-win__dot code-win__dot--g"></span>
+          <span class="code-win__filename">PaymentService.kt</span>
         </div>
-    </header>
-
-    <main>
-        <section id="hero" class="bg-gradient-to-r from-gray-800 to-gray-900 text-white flex items-center justify-center min-h-screen section-padding pt-24 md:pt-0">
-            <div class="container mx-auto text-center px-4">
-                <img src="assets/images/profile-picture.jpg" alt="Foto de Perfil" class="w-[150px] h-[150px] object-cover object-center rounded-full mx-auto mb-6 border-4 border-primary-400 shadow-lg">
-                <h1 class="text-5xl md:text-6xl font-extrabold mb-4 leading-tight">
-                    <span data-i18n="heroGreeting">Olá, eu sou </span><span id="dynamic-name" class="text-primary-400">Gusthawo Junkes</span>
-                </h1>
-                <div class="flex flex-wrap justify-center items-center gap-4 mt-8 mb-8">
-                    <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java Icon" class="h-8 w-8 md:h-10 md:w-10">
-                    <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin Icon" class="h-8 w-8 md:h-10 md:w-10">
-                    <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot Icon" class="h-8 w-8 md:h-10 md:w-10">
-                    <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS Icon" class="h-8 w-8 md:h-10 md:w-10">
-                    <img src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="Kafka Icon" class="h-8 w-8 md:h-10 md:w-10">
-                    <img src="https://www.vectorlogo.zone/logos/docker/docker-icon.svg" alt="Docker Icon" class="h-8 w-8 md:h-10 md:w-10">
-                </div>
-                <a href="#projects" class="bg-primary-500 hover:bg-primary-600 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105" data-i18n="heroButton">Ver Meus Projetos</a>
-            </div>
-        </section>
-
-        <section id="about" class="bg-white dark:bg-gray-800 section-padding">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="aboutTitle">Sobre</h2>
-                <div id="about-content" class="prose lg:prose-xl text-gray-700 dark:text-gray-300 leading-relaxed">
-                    <p class="mb-4" data-i18n="aboutP1">
-                        Engenheiro de Software especializado em desenvolver, implementar e integrar soluções backend utilizando Java, Kotlin e Spring Boot, acumulando mais de 5 anos de experiência.
-                    </p>
-                    <p class="mb-4" data-i18n="aboutP2">
-                        Minha atuação é sempre orientada por boas práticas de engenharia, sendo TDD (Test-Driven Development) uma metodologia que aplico constantemente para garantir testes automatizados e cobertura de código desde o primeiro commit. Também fui responsável por estruturar pipelines automatizados com GitHub Actions, integrando testes unitários, análise estática de código e validações automatizadas, aumentando significativamente a eficiência das entregas e reduzindo o retrabalho.
-                    </p>
-                    <p class="mb-4" data-i18n="aboutP3">
-                        Uma das minhas experiências mais relevantes foi no Banco PAN, onde contribuí com soluções backend para prevenção de fraudes monetárias e não monetárias. Trabalhei em um ecossistema de microsserviços, com Spring Boot e Quarkus, utilizando Java 8, 17 e 21. Esse ecossistema processa cerca de 400 transações por segundo (TPS), o que exigiu uma forte preocupação com desempenho, resiliência e observabilidade. Dentro desse contexto, desenvolvi e implementei componentes críticos para atender às demandas regulatórias do Banco Central do Brasil (BACEN), garantindo conformidade e segurança. Além disso, participei ativamente de discussões técnicas para otimizar a comunicação entre microsserviços. Um dos meus principais resultados foi a redução do tempo de resposta de uma aplicação de 1400ms para 200ms - uma melhoria de aproximadamente 85% por meio de otimização de código, ajustes de infraestrutura e melhorias em fluxos de comunicação.
-                    </p>
-                    <p class="mb-4" data-i18n="aboutP4">
-                        Além da experiência no setor bancário, tive a oportunidade de liderar tecnicamente um projeto de integração entre um CRM e uma solução de telefonia de um parceiro internacional, enfrentando desafios de integração em tempo real e garantindo a consistência das informações entre sistemas distintos.
-                    </p>
-                    <p data-i18n="aboutP5">
-                        Gosto de trabalhar em equipe, compartilhar conhecimento e contribuir para a evolução contínua dos processos e das soluções onde atuo. Acredito que tecnologia de qualidade é construída com boas práticas, colaboração e inovação constante. Estou sempre aberto a novos desafios e oportunidades onde eu possa agregar valor e continuar evoluindo como engenheiro.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section id="skills" class="bg-gray-100 dark:bg-gray-900 section-padding">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="skillsTitle">Minhas Habilidades</h2>
-                <div id="skills-content" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/java/java-icon.svg" alt="Java Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillJavaTitle">Java</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillJavaDesc">Spring Boot, Spring Cloud, Quarkus</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-icon.svg" alt="Kotlin Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillKotlinTitle">Kotlin</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillKotlinDesc">Ktor, Spring Boot, Exposed</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/springio/springio-icon.svg" alt="Spring Boot Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillMicroservicesTitle">Microsserviços</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillMicroservicesDesc">RESTful APIs, Kafka, RabbitMQ</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/postgresql/postgresql-icon.svg" alt="PostgreSQL Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillDatabasesTitle">Bancos de Dados</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillDatabasesDesc">PostgreSQL, MySQL, MongoDB, Redis</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/amazon_aws/amazon_aws-icon.svg" alt="AWS Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillCloudTitle">Cloud & Containers</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillCloudDesc">AWS, Docker, Kubernetes</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/git-scm/git-scm-icon.svg" alt="Git Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillDevOpsTitle">DevOps & CI/CD</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillDevOpsDesc">Git, Jenkins, GitHub Actions, SonarQube</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://junit.org/junit5/assets/img/junit5-logo.png" alt="JUnit Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillTestingTitle">Testes</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillTestingDesc">Testes Unitários, Integração, Cucumber, Mockito</p>
-                    </div>
-                    <div class="skill-item bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md text-center flex flex-col items-center">
-                        <img src="https://www.vectorlogo.zone/logos/atlassian_jira/atlassian_jira-icon.svg" alt="Jira Icon" class="h-12 w-12 mb-2">
-                        <h3 class="text-xl font-semibold mb-2 text-gray-900 dark:text-white" data-i18n="skillMethodologiesTitle">Metodologias & Outros</h3>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="skillMethodologiesDesc">Scrum, Kanban, Jira</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="experience" class="bg-white dark:bg-gray-800 section-padding">
-            <div class="container mx-auto px-4 max-w-9xl">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="experienceTitle">Experiência Profissional</h2>
-                <div class="timeline">
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <div class="text-content flex-grow">
-                                <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobNTConsultTitle">Engenheiro de Software Sênior</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobNTConsultCompany">NTConsult</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobNTConsultDuration"></p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobNTConsultLocation">Porto Alegre, Rio Grande do Sul, Brasil</p>
-                            </div>
-                            <img src="./assets/images/ntconsult_logo.jpeg" alt="Company Logo" class="w-20 h-20 ml-4 rounded-full object-contain flex-shrink-0">
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <img src="./assets/images/ciandt_logo.jpeg" alt="Company Logo" class="w-20 h-20 mr-4 rounded-full object-contain flex-shrink-0">
-                            <div class="text-content flex-grow">
-                                <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobCITTitle">Engenheiro de Software Sênior @ Banco Pan</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobCITCompany">CI&T</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobCITDuration">novembro de 2024 - abril de 2025 (6 meses)</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobCITLocation">Campinas, São Paulo, Brasil</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <div class="text-content flex-grow">
-                                <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasSeniorTitle">Programador Sênior</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasSeniorCompany">GEOvendas</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasSeniorDuration">maio de 2023 - novembro de 2024 (1 ano 7 meses)</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasSeniorLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
-                            </div>
-                            <img src="./assets/images/geovendas_logo.jpeg" alt="Company Logo" class="w-20 h-20 ml-4 rounded-full object-contain flex-shrink-0">
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <img src="./assets/images/geovendas_logo.jpeg" alt="Company Logo" class="w-20 h-20 mr-4 rounded-full object-contain flex-shrink-0">
-                            <div class="text-content flex-grow">
-                                <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasPlenoTitle">Programador Pleno</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasPlenoCompany">GEOvendas</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasPlenoDuration">julho de 2022 - abril de 2023 (10 meses)</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasPlenoLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <div class="text-content flex-grow">
-                                <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasJuniorTitle">Programador Júnior</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasJuniorCompany">GEOvendas</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasJuniorDuration">outubro de 2020 - junho de 2022 (1 ano 9 meses)</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasJuniorLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
-                            </div>
-                            <img src="./assets/images/geovendas_logo.jpeg" alt="Company Logo" class="w-20 h-20 ml-4 rounded-full object-contain flex-shrink-0">
-                        </div>
-                    </div>
-
-                    <div class="timeline-item">
-                        <div class="timeline-item-dot"></div>
-                        <div class="timeline-item-content text-gray-800 dark:text-gray-200 flex items-center">
-                            <img src="./assets/images/geovendas_logo.jpeg" alt="Company Logo" class="w-20 h-20 mr-4 rounded-full object-contain flex-shrink-0">
-                            <div class="text-content flex-grow">
-                                <h3 class="2xl font-bold text-primary-600 dark:text-primary-400 mb-1" data-i18n="jobGEOVendasInternTitle">Estagiário em Desenvolvimento</h3>
-                                <p class="text-xl font-semibold mb-1" data-i18n="jobGEOVendasInternCompany">GEOvendas</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-2" data-i18n="jobGEOVendasInternDuration">junho de 2020 - outubro de 2020 (5 meses)</p>
-                                <p class="text-sm text-gray-600 dark:text-gray-400 mb-4" data-i18n="jobGEOVendasInternLocation">Jaraguá do Sul, Santa Catarina, Brasil</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="education" class="bg-white dark:bg-gray-800 section-padding">
-            <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="educationTitle">Educação</h2>
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex mb-6">
-                    <div class="flex-shrink-0 mr-6">
-                        <img src="./assets/images/fiap_logo.jpeg" alt="Education Icon" class="w-16 h-16 object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2" data-i18n="educationDegree4">Software Architecture</h3>
-                        <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2" data-i18n="educationInstitution4">Pós-graduação, FIAP</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-i18n="educationPeriod4">2025 - 2026</p>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="educationDescription4">Pós-graduação focada em arquitetura de software, padrões de design e soluções escaláveis.</p>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex mb-6">
-                    <div class="flex-shrink-0 mr-6">
-                        <img src="./assets/images/ec_english_logo.jpeg" alt="Language Exchange Icon" class="w-16 h-16 object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2" data-i18n="educationDegree3">Intercâmbio de idioma</h3>
-                        <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2" data-i18n="educationInstitution3">EC English Centre</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-i18n="educationPeriod3">2025 - 2025</p>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="educationDescription3">Intercâmbio focado no aprendizado e aperfeiçoamento da língua inglesa.</p>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex mb-6">
-                    <div class="flex-shrink-0 mr-6">
-                        <img src="./assets/images/catolicasc_logo.jpeg" alt="Software Engineering Icon" class="w-16 h-16 object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2" data-i18n="educationDegree2">Engenharia de Software</h3>
-                        <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2" data-i18n="educationInstitution2">Bacharelado, Universidade Católica de Santa Catarina</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-i18n="educationPeriod2">2020 - 2023</p>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="educationDescription2">Formação em engenharia de software, com ênfase em desenvolvimento de sistemas, arquitetura de software e metodologias ágeis.</p>
-                    </div>
-                </div>
-                <div class="bg-white dark:bg-gray-800 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow flex">
-                    <div class="flex-shrink-0 mr-6">
-                        <img src="./assets/images/senai_sc_logo.jpeg" alt="Technical Course Icon" class="w-16 h-16 object-contain">
-                    </div>
-                    <div>
-                        <h3 class="text-2xl font-bold text-primary-600 dark:text-primary-400 mb-2" data-i18n="educationDegree1">Informática para Internet</h3>
-                        <p class="text-lg font-semibold text-gray-800 dark:text-gray-200 mb-2" data-i18n="educationInstitution1">Curso técnico, SENAI/SC</p>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mb-3" data-i18n="educationPeriod1">2018 - 2019</p>
-                        <p class="text-gray-600 dark:text-gray-400" data-i18n="educationDescription1">Curso técnico profissionalizante em informática para internet, com foco em desenvolvimento web, lógica de programação e banco de dados.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="projects" class="bg-gray-100 dark:bg-gray-900 section-padding">
-            <div class="container mx-auto px-4">
-                <h2 class="text-4xl font-bold text-center mb-12 text-gray-900 dark:text-white" data-i18n="projectsTitle">Meus Projetos</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
-                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Order System" alt="Order System" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project1Title">Order System</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project1Desc">Um ecossistema para a emissão e processamento de pedidos</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">Kotlin</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Spring Boot</span>
-                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-gray-700 dark:text-gray-300">Kafka</span>
-                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">RavenDB</span>
-                            </div>
-                            <div class="flex justify-end space-x-3">
-                                <a href="https://github.com/gusthawojunkes/order-system" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
-                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
-                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Financial+File+Parser" alt="Financial File Parser" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project2Title">Serviço de Processamento de Eventos</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project2Desc">Um serviço backend assíncrono que consome e processa eventos de uma fila de mensagens (Kafka), realizando transformações de dados e persistência.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-purple-100 text-purple-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">Kotlin</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">Ktor</span>
-                                <span class="bg-green-100 text-green-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Gson</span>
-                            </div>
-                            <div class="flex justify-end space-x-3">
-                                <a href="https://github.com/gusthawojunkes/financial-file-parser" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
-                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="project-card bg-gray-50 dark:bg-gray-700 rounded-lg shadow-lg overflow-hidden border border-gray-200 dark:border-gray-600">
-                        <img src="https://placehold.co/600x400/3b82f6/FFFFFF?text=Wisegress+API" alt="Wisegress API" class="w-full h-48 object-cover">
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold mb-3 text-gray-900 dark:text-white" data-i18n="project3Title">Wisegress API</h3>
-                            <p class="text-gray-700 dark:text-gray-300 mb-4" data-i18n="project3Desc">API RESTful construída para servir o aplicativo Wisegress</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-yellow-900 dark:text-yellow-300">Java</span>
-                                <span class="bg-primary-100 text-primary-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-green-700 dark:text-green-300">Quarkus</span>
-                                <span class="bg-orange-100 text-orange-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-purple-700 dark:text-purple-300">JWT</span>
-                                <span class="bg-red-100 text-red-800 text-xs font-medium px-2.5 py-0.5 rounded-full dark:bg-blue-700 dark:text-blue-300">PostgreSQL</span>
-                            </div>
-                            <div class="flex justify-end space-x-3">
-                                <a href="https://github.com/gusthawojunkes/wisegress-api" target="_blank" class="text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center">
-                                    <img src="assets/icons/github.svg" class="w-5 h-5 mr-1" alt="GitHub Icon">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact" class="bg-gray-900 text-white section-padding">
-            <div class="container mx-auto px-4 max-w-2xl">
-                <h2 class="text-4xl font-bold text-center mb-12" data-i18n="contactTitle">Entre em Contato</h2>
-                <p class="text-center text-lg mb-8" data-i18n="contactSubtitle">Estou aberto a novas oportunidades e colaborações. Entre em contato através dos links abaixo:</p>
-                <div class="flex justify-center space-x-6">
-                    <a href="https://www.linkedin.com/in/gusthawojunkes" target="_blank" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-[#0A66C2] hover:bg-[#004182] focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#0A66C2] transition-colors">
-                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
-                        </svg>
-                        LinkedIn
-                    </a>
-                    <a href="mailto:gusthawo.junkes@gmail.com" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-red-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-500 transition-colors">
-                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
-                        </svg>
-                        Email
-                    </a>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="bg-gray-800 text-white p-6 text-center">
-        <div class="container mx-auto">
-            <p data-i18n="footerCopyright">&copy; 2025 Gusthawo Junkes. Todos os direitos reservados.</p>
+        <div class="code-win__body">
+<pre class="code-pre"><code><span class="t-ann">@Service</span>
+<span class="t-kw">class</span> <span class="t-cls">PaymentService</span>(
+  <span class="t-kw">private val</span> repo: <span class="t-cls">PaymentRepository</span>,
+  <span class="t-kw">private val</span> kafka: <span class="t-cls">KafkaTemplate</span>
+) {
+  <span class="t-ann">@Transactional</span>
+  <span class="t-kw">suspend fun</span> <span class="t-fn">process</span>(
+    payment: <span class="t-cls">Payment</span>
+  ): <span class="t-cls">Result</span>&lt;<span class="t-cls">String</span>&gt; =
+    withContext(<span class="t-cls">Dispatchers</span>.IO) {
+      repo.<span class="t-fn">save</span>(payment)
+        .also { kafka.<span class="t-fn">send</span>(
+          <span class="t-str">"payments"</span>,
+          it.<span class="t-fn">toEvent</span>()
+        )}
+        .let { <span class="t-cls">Result</span>.<span class="t-fn">success</span>(it.id) }
+    }
+}<span class="t-cursor">▋</span></code></pre>
         </div>
-    </footer>
+      </div>
+      <div class="hero__badges">
+        <span class="hero__badge">Microservices</span>
+        <span class="hero__badge">TDD</span>
+        <span class="hero__badge">CI/CD</span>
+        <span class="hero__badge">High Availability</span>
+      </div>
+    </div>
+  </div>
 
-    <script src="assets/js/main.js"></script>
+  <div class="hero__scroll" aria-hidden="true">
+    <div class="hero__scroll-line"></div>
+  </div>
+</section>
+
+<!-- ===================== ABOUT ===================== -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__label" data-i18n="nav_about">Sobre</span>
+      <h2 class="sec-head__title" data-i18n="about_title">Quem sou eu</h2>
+    </div>
+
+    <div class="about">
+      <div class="about__side">
+        <div class="about__photo-wrap">
+          <img src="assets/images/profile-picture.jpg" alt="Gusthawo Junkes" class="about__photo" loading="lazy" />
+        </div>
+        <div class="about__stats">
+          <div class="stat">
+            <span class="stat__n">5+</span>
+            <span class="stat__l" data-i18n="about_stat_years">anos de experiência</span>
+          </div>
+          <div class="stat">
+            <span class="stat__n">85%</span>
+            <span class="stat__l" data-i18n="about_stat_perf">melhoria de performance</span>
+          </div>
+          <div class="stat">
+            <span class="stat__n">400</span>
+            <span class="stat__l" data-i18n="about_stat_tps">TPS em produção</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="about__text">
+        <p class="about__p about__p--lead" data-i18n="about_p1">placeholder</p>
+        <p class="about__p" data-i18n="about_p2">placeholder</p>
+        <p class="about__p" data-i18n="about_p3">placeholder</p>
+        <p class="about__p" data-i18n="about_p4">placeholder</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== SKILLS ===================== -->
+<section id="skills" class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__label" data-i18n="nav_skills">Habilidades</span>
+      <h2 class="sec-head__title" data-i18n="skills_title">Stack técnica</h2>
+    </div>
+
+    <div class="skills">
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-java-plain colored"></i>
+          <h3 class="skill-card__name">Java</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_java_desc">Spring Boot, Spring Cloud, Quarkus</p>
+        <div class="skill-card__tags">
+          <span class="tag">Spring Boot</span><span class="tag">Spring Cloud</span>
+          <span class="tag">Quarkus</span><span class="tag">Spring Security</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-kotlin-plain colored"></i>
+          <h3 class="skill-card__name">Kotlin</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_kotlin_desc">Ktor, Coroutines, Exposed</p>
+        <div class="skill-card__tags">
+          <span class="tag">Ktor</span><span class="tag">Coroutines</span>
+          <span class="tag">Exposed ORM</span><span class="tag">Spring Boot</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-apachekafka-original"></i>
+          <h3 class="skill-card__name" data-i18n="skill_microservices">Microsserviços</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_microservices_desc">RESTful APIs, Kafka, RabbitMQ</p>
+        <div class="skill-card__tags">
+          <span class="tag">RESTful</span><span class="tag">Kafka</span>
+          <span class="tag">RabbitMQ</span><span class="tag">API Gateway</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-postgresql-plain colored"></i>
+          <h3 class="skill-card__name" data-i18n="skill_databases">Bancos de Dados</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_databases_desc">PostgreSQL, MySQL, MongoDB, Redis</p>
+        <div class="skill-card__tags">
+          <span class="tag">PostgreSQL</span><span class="tag">MySQL</span>
+          <span class="tag">MongoDB</span><span class="tag">Redis</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-amazonwebservices-plain-wordmark colored"></i>
+          <h3 class="skill-card__name" data-i18n="skill_cloud">Cloud & Containers</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_cloud_desc">AWS, Docker, Kubernetes</p>
+        <div class="skill-card__tags">
+          <span class="tag">AWS</span><span class="tag">Docker</span>
+          <span class="tag">Kubernetes</span><span class="tag">ECS / EKS</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-githubactions-plain colored"></i>
+          <h3 class="skill-card__name">DevOps & CI/CD</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_devops_desc">GitHub Actions, Jenkins, SonarQube</p>
+        <div class="skill-card__tags">
+          <span class="tag">GitHub Actions</span><span class="tag">Jenkins</span>
+          <span class="tag">SonarQube</span><span class="tag">Git Flow</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-cucumber-plain colored"></i>
+          <h3 class="skill-card__name" data-i18n="skill_testing">Testes</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_testing_desc">Unitários, Integração, Cucumber, Mockito</p>
+        <div class="skill-card__tags">
+          <span class="tag">JUnit 5</span><span class="tag">Mockito</span>
+          <span class="tag">Cucumber</span><span class="tag">TestContainers</span>
+        </div>
+      </div>
+
+      <div class="skill-card">
+        <div class="skill-card__top">
+          <i class="skill-card__ico devicon-jira-plain colored"></i>
+          <h3 class="skill-card__name" data-i18n="skill_methodologies">Metodologias</h3>
+        </div>
+        <p class="skill-card__sub" data-i18n="skill_methodologies_desc">Scrum, Kanban, DDD, TDD</p>
+        <div class="skill-card__tags">
+          <span class="tag">Scrum</span><span class="tag">Kanban</span>
+          <span class="tag">DDD</span><span class="tag">TDD</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EXPERIENCE ===================== -->
+<section id="experience" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__label" data-i18n="nav_experience">Experiência</span>
+      <h2 class="sec-head__title" data-i18n="experience_title">Trajetória profissional</h2>
+    </div>
+
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot tl-item__dot--active"></div>
+          <div class="tl-item__line"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/ntconsult_logo.jpeg" alt="NTConsult" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_ntconsult_role">Tech Lead | Senior Backend Engineer</h3>
+              <p class="tl-item__company">NTConsult</p>
+              <span class="tl-item__period tl-item__period--active">
+                <span data-i18n="exp_ntconsult_period_label">Abril 2025 — Presente</span>&nbsp;·&nbsp;<span id="ntconsult-duration"></span>
+              </span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_ntconsult_desc">Atuação no desenvolvimento de soluções de software orientadas a microsserviços, com foco em qualidade, escalabilidade e boas práticas de engenharia.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__line"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/ciandt_logo.jpeg" alt="CI&T" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_ciandt_role">Engenheiro de Software Sênior · Banco PAN</h3>
+              <p class="tl-item__company">CI&T</p>
+              <span class="tl-item__period" data-i18n="exp_ciandt_period">Novembro 2024 — Abril 2025 · 6 meses</span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_ciandt_desc">Atuei no ecossistema antifraude do Banco PAN, desenvolvendo microsserviços que processam mais de 400 TPS sob regulamentação do Banco Central do Brasil. Reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms — melhoria de 85%.</p>
+          <div class="tl-item__tags">
+            <span class="tag">Java</span><span class="tag">Spring Boot</span>
+            <span class="tag">Kafka</span><span class="tag">AWS</span><span class="tag">BACEN</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__line"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_geo_senior_role">Programador Sênior</h3>
+              <p class="tl-item__company">GEOvendas</p>
+              <span class="tl-item__period" data-i18n="exp_geo_senior_period">Maio 2023 — Novembro 2024 · 1a 7m</span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_geo_senior_desc">Liderança técnica em projetos de modernização para arquitetura de microsserviços com Kotlin e Spring Boot. Responsável por design de APIs, revisão de código e integração com sistemas de parceiros internacionais.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__line"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_geo_full_role">Programador Pleno</h3>
+              <p class="tl-item__company">GEOvendas</p>
+              <span class="tl-item__period" data-i18n="exp_geo_full_period">Julho 2022 — Abril 2023 · 10 meses</span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_geo_full_desc">Desenvolvimento e manutenção de APIs RESTful, testes automatizados com JUnit e Mockito, e pipelines de CI/CD com Jenkins e GitHub Actions.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__line"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_geo_junior_role">Programador Júnior</h3>
+              <p class="tl-item__company">GEOvendas</p>
+              <span class="tl-item__period" data-i18n="exp_geo_junior_period">Outubro 2020 — Junho 2022 · 1a 9m</span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_geo_junior_desc">Desenvolvimento de funcionalidades e APIs REST no ecossistema de vendas com Java, Spring Boot e PostgreSQL. Participação em squads ágeis com Scrum e Kanban.</p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-item__conn">
+          <div class="tl-item__dot"></div>
+          <div class="tl-item__line tl-item__line--last"></div>
+        </div>
+        <div class="tl-item__card">
+          <div class="tl-item__head">
+            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
+            <div class="tl-item__meta">
+              <h3 class="tl-item__role" data-i18n="exp_geo_intern_role">Estagiário de Desenvolvimento</h3>
+              <p class="tl-item__company">GEOvendas</p>
+              <span class="tl-item__period" data-i18n="exp_geo_intern_period">Junho 2020 — Outubro 2020 · 5 meses</span>
+            </div>
+          </div>
+          <p class="tl-item__desc" data-i18n="exp_geo_intern_desc">Início da trajetória profissional com apoio no desenvolvimento do GEOvendas Analytics e aprendizado das bases da engenharia de software em ambiente produtivo.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===================== EDUCATION ===================== -->
+<section id="education" class="section section--alt">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__label" data-i18n="nav_education">Formação</span>
+      <h2 class="sec-head__title" data-i18n="education_title">Educação</h2>
+    </div>
+
+    <div class="edu-grid">
+      <div class="edu-card">
+        <div class="edu-card__logo-wrap">
+          <img src="assets/images/fiap_logo.jpeg" alt="FIAP" class="edu-card__logo" loading="lazy" />
+        </div>
+        <div class="edu-card__body">
+          <span class="edu-card__level" data-i18n="edu_fiap_level">Pós-Graduação</span>
+          <h3 class="edu-card__course" data-i18n="edu_fiap_course">Arquitetura de Software</h3>
+          <p class="edu-card__inst">FIAP</p>
+          <span class="edu-card__period" data-i18n="edu_fiap_period">2025 — 2026</span>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-card__logo-wrap">
+          <img src="assets/images/ec_english_logo.jpeg" alt="EC English" class="edu-card__logo" loading="lazy" />
+        </div>
+        <div class="edu-card__body">
+          <span class="edu-card__level" data-i18n="edu_ec_level">Intercâmbio</span>
+          <h3 class="edu-card__course" data-i18n="edu_ec_course">Língua Inglesa</h3>
+          <p class="edu-card__inst">EC English Centre</p>
+          <span class="edu-card__period" data-i18n="edu_ec_period">2025</span>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-card__logo-wrap">
+          <img src="assets/images/catolicasc_logo.jpeg" alt="Católica SC" class="edu-card__logo" loading="lazy" />
+        </div>
+        <div class="edu-card__body">
+          <span class="edu-card__level" data-i18n="edu_ucsc_level">Bacharelado</span>
+          <h3 class="edu-card__course" data-i18n="edu_ucsc_course">Engenharia de Software</h3>
+          <p class="edu-card__inst">Universidade Católica de Santa Catarina</p>
+          <span class="edu-card__period" data-i18n="edu_ucsc_period">2020 — 2023</span>
+        </div>
+      </div>
+
+      <div class="edu-card">
+        <div class="edu-card__logo-wrap">
+          <img src="assets/images/senai_sc_logo.jpeg" alt="SENAI" class="edu-card__logo" loading="lazy" />
+        </div>
+        <div class="edu-card__body">
+          <span class="edu-card__level" data-i18n="edu_senai_level">Técnico</span>
+          <h3 class="edu-card__course" data-i18n="edu_senai_course">Informática para Internet</h3>
+          <p class="edu-card__inst">SENAI/SC</p>
+          <span class="edu-card__period" data-i18n="edu_senai_period">2018 — 2019</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== PROJECTS ===================== -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="sec-head">
+      <span class="sec-head__label" data-i18n="nav_projects">Projetos</span>
+      <h2 class="sec-head__title" data-i18n="projects_title">Projetos pessoais</h2>
+    </div>
+
+    <div class="projects">
+      <div class="proj-card">
+        <div class="proj-card__top">
+          <div class="proj-card__ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/>
+            </svg>
+          </div>
+          <a href="https://github.com/gusthawojunkes/order-system" target="_blank" rel="noopener noreferrer" class="proj-card__gh" aria-label="Ver no GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+        <h3 class="proj-card__name" data-i18n="proj_order_name">Order System</h3>
+        <p class="proj-card__desc" data-i18n="proj_order_desc">placeholder</p>
+        <div class="proj-card__stack">
+          <span class="tag">Kotlin</span><span class="tag">Spring Boot</span>
+          <span class="tag">Kafka</span><span class="tag">RavenDB</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card__top">
+          <div class="proj-card__ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/>
+              <line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/>
+            </svg>
+          </div>
+          <a href="https://github.com/gusthawojunkes/financial-file-parser" target="_blank" rel="noopener noreferrer" class="proj-card__gh" aria-label="Ver no GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+        <h3 class="proj-card__name" data-i18n="proj_parser_name">Financial File Parser</h3>
+        <p class="proj-card__desc" data-i18n="proj_parser_desc">placeholder</p>
+        <div class="proj-card__stack">
+          <span class="tag">Kotlin</span><span class="tag">Ktor</span><span class="tag">Gson</span>
+        </div>
+      </div>
+
+      <div class="proj-card">
+        <div class="proj-card__top">
+          <div class="proj-card__ico">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+          </div>
+          <a href="https://github.com/gusthawojunkes/wisegress-api" target="_blank" rel="noopener noreferrer" class="proj-card__gh" aria-label="Ver no GitHub">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </div>
+        <h3 class="proj-card__name" data-i18n="proj_wisegress_name">Wisegress API</h3>
+        <p class="proj-card__desc" data-i18n="proj_wisegress_desc">placeholder</p>
+        <div class="proj-card__stack">
+          <span class="tag">Java</span><span class="tag">Quarkus</span>
+          <span class="tag">JWT</span><span class="tag">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" class="section section--contact">
+  <div class="container">
+    <div class="contact">
+      <p class="contact__eyebrow" data-i18n="contact_eyebrow">Vamos conversar</p>
+      <h2 class="contact__title" data-i18n="contact_title">Pronto para colaborar?</h2>
+      <p class="contact__desc" data-i18n="contact_desc">placeholder</p>
+      <div class="contact__btns">
+        <a href="https://www.linkedin.com/in/gusthawojunkes" target="_blank" rel="noopener noreferrer" class="btn btn--linkedin">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+          LinkedIn
+        </a>
+        <a href="mailto:gusthawo.junkes@gmail.com" class="btn btn--outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+          <span data-i18n="contact_email_btn">Enviar e-mail</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===================== FOOTER ===================== -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <p class="footer__copy" data-i18n="footer_copy">© 2025 Gusthawo Junkes. Todos os direitos reservados.</p>
+      <p class="footer__made" data-i18n="footer_made">Feito com precisão e café ☕</p>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>
