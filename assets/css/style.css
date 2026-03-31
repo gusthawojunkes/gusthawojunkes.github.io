@@ -1,19 +1,19 @@
 :root {
-  --bg:          #08080e;
-  --bg-2:        #0d0d18;
-  --surface:     #121220;
-  --surface-2:   #181828;
-  --border:      #1c1c2e;
-  --border-2:    #252538;
+  --bg:          #060810;
+  --bg-2:        #090c16;
+  --surface:     #0e1220;
+  --surface-2:   #131828;
+  --border:      #182030;
+  --border-2:    #1e2a3e;
 
-  --text:        #eeeef4;
-  --text-2:      #8888a4;
-  --text-3:      #4a4a62;
+  --text:        #e8eef8;
+  --text-2:      #7a90b4;
+  --text-3:      #3a4d6a;
 
-  --accent:      #c8a96e;
-  --accent-2:    #d6b87a;
-  --accent-dim:  rgba(200, 169, 110, 0.12);
-  --accent-glow: rgba(200, 169, 110, 0.06);
+  --accent:      #4d8ef0;
+  --accent-2:    #6aa3f5;
+  --accent-dim:  rgba(77, 142, 240, 0.12);
+  --accent-glow: rgba(77, 142, 240, 0.06);
 
   --blue:        #5b94f8;
   --teal:        #4fd1c5;
@@ -35,21 +35,21 @@
 }
 
 html.light {
-  --bg:          #f0ede6;
-  --bg-2:        #e6e2d9;
+  --bg:          #f0f4fb;
+  --bg-2:        #e4ecf7;
   --surface:     #ffffff;
-  --surface-2:   #f5f2eb;
-  --border:      #dbd7cc;
-  --border-2:    #ccc8bc;
+  --surface-2:   #eaf0fa;
+  --border:      #c8d8f0;
+  --border-2:    #b0c8e8;
 
-  --text:        #17171f;
-  --text-2:      #55556a;
-  --text-3:      #9090a8;
+  --text:        #0f1a2e;
+  --text-2:      #4a5f80;
+  --text-3:      #8aa0bc;
 
-  --accent:      #9a7a38;
-  --accent-2:    #ad8a42;
-  --accent-dim:  rgba(154, 122, 56, 0.1);
-  --accent-glow: rgba(154, 122, 56, 0.05);
+  --accent:      #2a6fd4;
+  --accent-2:    #3d82e8;
+  --accent-dim:  rgba(42, 111, 212, 0.1);
+  --accent-glow: rgba(42, 111, 212, 0.05);
 }
 
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -162,7 +162,7 @@ button { cursor: pointer; font-family: inherit; border: none; background: none; 
   border-bottom: 1px solid var(--border);
   transition: background var(--trans), border-color var(--trans);
 }
-html.light .nav { background: rgba(240, 237, 230, 0.88); }
+html.light .nav { background: rgba(240, 244, 251, 0.88); }
 
 .nav__inner {
   max-width: 1100px;
@@ -650,7 +650,7 @@ html.light .code-win {
   gap: 10px;
   margin-bottom: 10px;
 }
-.skill-card__ico { font-size: 20px; line-height: 1; }
+.skill-card__ico { font-size: 26px; line-height: 1; }
 .skill-card__name {
   font-family: var(--font-display);
   font-size: 16px;

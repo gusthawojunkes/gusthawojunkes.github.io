@@ -39,7 +39,7 @@ const translations = {
 
     experience_title: 'Trajetória profissional',
 
-    exp_ntconsult_role:         'Engenheiro de Software Sênior',
+    exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
     exp_ntconsult_period_label: 'Abril 2025 — Presente',
     exp_ntconsult_desc:         'Atuação no desenvolvimento de soluções de software orientadas a microsserviços, com foco em qualidade, escalabilidade e boas práticas de engenharia.',
 
@@ -135,7 +135,7 @@ const translations = {
 
     experience_title: 'Career timeline',
 
-    exp_ntconsult_role:         'Senior Software Engineer',
+    exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
     exp_ntconsult_period_label: 'April 2025 — Present',
     exp_ntconsult_desc:         'Working on microservices-oriented software solutions with a focus on quality, scalability, and engineering best practices.',
 
