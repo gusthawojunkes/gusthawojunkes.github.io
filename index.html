@@ -14,6 +14,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" type="image/png" href="assets/images/logo.png" />
 </head>
 <body>
 
@@ -21,7 +22,7 @@
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#hero" class="nav__logo">
-      <span class="nav__logo-mark">GJ</span>
+      <img src="assets/images/logo.png" alt="Gusthawo Junkes" class="nav__logo-img" />
       <span class="nav__logo-text">Gusthawo Junkes</span>
     </a>
 
@@ -107,12 +108,11 @@
       </p>
 
       <div class="hero__stack">
-        <span class="stack-pill">Java</span>
-        <span class="stack-pill">Kotlin</span>
-        <span class="stack-pill">Spring Boot</span>
-        <span class="stack-pill">Kafka</span>
-        <span class="stack-pill">AWS</span>
-        <span class="stack-pill">Docker</span>
+        <span class="stack-pill"><i class="devicon-java-plain colored"></i> Java</span>
+        <span class="stack-pill"><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+        <span class="stack-pill"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+        <span class="stack-pill"><i class="devicon-apachekafka-original"></i> Kafka</span>
+        <span class="stack-pill"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</span>
       </div>
 
       <div class="hero__actions">
@@ -198,6 +198,7 @@
         <p class="about__p" data-i18n="about_p2">placeholder</p>
         <p class="about__p" data-i18n="about_p3">placeholder</p>
         <p class="about__p" data-i18n="about_p4">placeholder</p>
+        <p class="about__p" data-i18n="about_p5">placeholder</p>
       </div>
     </div>
   </div>
@@ -311,131 +312,293 @@
   </div>
 </section>
 
-<!-- ===================== EXPERIENCE ===================== -->
+<!-- ===================== EXPERIENCE — vertical timeline ===================== -->
 <section id="experience" class="section">
   <div class="container">
     <div class="sec-head">
       <span class="sec-head__label" data-i18n="nav_experience">Experiência</span>
       <h2 class="sec-head__title" data-i18n="experience_title">Trajetória profissional</h2>
+      <p class="sec-head__caption" data-i18n="experience_caption">Marcos de carreira e projetos pessoais. Mais recente primeiro.</p>
     </div>
 
-    <div class="timeline">
-
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot tl-item__dot--active"></div>
-          <div class="tl-item__line"></div>
-        </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/ntconsult_logo.jpeg" alt="NTConsult" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_ntconsult_role">Tech Lead | Senior Backend Engineer</h3>
-              <p class="tl-item__company">NTConsult</p>
-              <span class="tl-item__period tl-item__period--active">
-                <span data-i18n="exp_ntconsult_period_label">Abril 2025 — Presente</span>&nbsp;·&nbsp;<span id="ntconsult-duration"></span>
-              </span>
-            </div>
-          </div>
-          <p class="tl-item__desc" data-i18n="exp_ntconsult_desc">Atuação no desenvolvimento de soluções de software orientadas a microsserviços, com foco em qualidade, escalabilidade e boas práticas de engenharia.</p>
-        </div>
+    <div class="vtl">
+      <!-- Legend -->
+      <div class="vtl__legend">
+        <span class="vtl__legend-item">
+          <span class="vtl__legend-dot vtl__legend-dot--work" aria-hidden="true"></span>
+          <span data-i18n="ctl_legend_work">Carreira</span>
+        </span>
+        <span class="vtl__legend-item">
+          <span class="vtl__legend-dot vtl__legend-dot--project" aria-hidden="true"></span>
+          <span data-i18n="ctl_legend_project">Projeto</span>
+        </span>
       </div>
 
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot"></div>
-          <div class="tl-item__line"></div>
+      <div class="vtl__body">
+
+        <!-- ── 2025 ──────────────────────────────────────────────────────── -->
+        <div class="vtl__year-mark" aria-label="2025">
+          <span class="vtl__year-pill">2025</span>
+          <span class="vtl__year-line" aria-hidden="true"></span>
         </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/ciandt_logo.jpeg" alt="CI&T" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_ciandt_role">Engenheiro de Software Sênior · Banco PAN</h3>
-              <p class="tl-item__company">CI&T</p>
-              <span class="tl-item__period" data-i18n="exp_ciandt_period">Novembro 2024 — Abril 2025 · 6 meses</span>
+
+        <!-- Turbozone App · projeto -->
+        <article class="vtl__item vtl__item--project">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--project" data-i18n="ctl_badge_project">Projeto</span>
+            <div class="vtl__head">
+              <img src="assets/images/logo_turbozone.png" alt="Turbozone" class="vtl__logo vtl__logo--turbozone" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="proj_turbozone_role">Co-Founder · Turbozone</h3>
+                <p class="vtl__company" data-i18n="proj_turbozone_company">App Mobile · Projeto</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="proj_turbozone_period">Novembro 2025 — Presente</span>
+            <p class="vtl__desc" data-i18n="proj_turbozone_desc">Turbozone é uma plataforma social mobile para entusiastas automotivos. Conecta apaixonados por carros no Brasil por meio de eventos, crews (clubes de carros), showcases de veículos e um feed social. Os usuários descobrem encontros próximos, gerenciam sua garagem, registram manutenções e constroem comunidade em torno da paixão por carros. Mais de 500 downloads nas lojas.</p>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-react-original colored"></i> React Native</span>
+              <span class="tag"><i class="devicon-typescript-plain colored"></i> TypeScript</span>
+              <span class="tag"><i class="devicon-firebase-plain colored"></i> Firebase</span>
+              <span class="tag"><i class="devicon-terraform-plain colored"></i> IaC</span>
+            </div>
+            <div class="vtl__stores">
+              <a href="https://play.google.com/store/apps/details?id=com.turbozone&hl=pt_BR" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Baixar na Google Play">
+                <svg class="store-btn__icon" viewBox="0 0 512 512" aria-hidden="true">
+                  <defs>
+                    <linearGradient id="gp1" x1="70" y1="430" x2="300" y2="200" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#00a0ff"/><stop offset="1" stop-color="#00e3ff"/></linearGradient>
+                    <linearGradient id="gp2" x1="460" y1="256" x2="200" y2="256" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ffe000"/><stop offset="1" stop-color="#ffbd00"/></linearGradient>
+                    <linearGradient id="gp3" x1="360" y1="430" x2="80" y2="430" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#ff3a44"/><stop offset="1" stop-color="#c31162"/></linearGradient>
+                    <linearGradient id="gp4" x1="80" y1="80" x2="360" y2="80" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#32a071"/><stop offset="1" stop-color="#2da771"/></linearGradient>
+                  </defs>
+                  <path fill="url(#gp1)" d="M78 50c-6 6-10 15-10 27v358c0 12 4 21 10 27l2 2L283 261v-5L80 48z"/>
+                  <path fill="url(#gp2)" d="M350 329l-67-67v-5l67-67 2 1 80 45c23 13 23 34 0 47z"/>
+                  <path fill="url(#gp3)" d="M352 328L283 259 78 464c8 8 20 9 34 1z"/>
+                  <path fill="url(#gp4)" d="M352 184L112 47c-14-8-26-7-34 1l205 205z"/>
+                </svg>
+                <span class="store-btn__text">
+                  <span class="store-btn__tag" data-i18n="store_play_tag">DISPONÍVEL NO</span>
+                  <span class="store-btn__name">Google Play</span>
+                </span>
+              </a>
+              <a href="https://apps.apple.com/br/app/turbozone-app/id6755053798" target="_blank" rel="noopener noreferrer" class="store-btn" aria-label="Baixar na App Store">
+                <svg class="store-btn__icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                  <path d="M17.5 12.5c0-2.3 1.9-3.4 2-3.5-1.1-1.6-2.8-1.8-3.4-1.8-1.4-.2-2.8.9-3.5.9-.7 0-1.9-.8-3.1-.8-1.6 0-3.1.9-3.9 2.4-1.7 2.9-.4 7.2 1.2 9.6.8 1.1 1.7 2.4 2.9 2.4 1.2 0 1.6-.8 3-.8s1.8.8 3.1.7c1.3 0 2.1-1.2 2.9-2.3.9-1.3 1.3-2.6 1.3-2.6-.1-.1-2.5-.9-2.5-3.7zm-2.4-6.9c.6-.7 1.1-1.8 1-2.9-.9.1-2 .7-2.7 1.4-.6.6-1.1 1.7-.9 2.8 1-.1 2-.6 2.6-1.3z"/>
+                </svg>
+                <span class="store-btn__text">
+                  <span class="store-btn__tag" data-i18n="store_apple_tag">BAIXAR NA</span>
+                  <span class="store-btn__name">App Store</span>
+                </span>
+              </a>
             </div>
           </div>
-          <p class="tl-item__desc" data-i18n="exp_ciandt_desc">Atuei no ecossistema antifraude do Banco PAN, desenvolvendo microsserviços que processam mais de 400 TPS sob regulamentação do Banco Central do Brasil. Reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms — melhoria de 85%.</p>
-          <div class="tl-item__tags">
-            <span class="tag">Java</span><span class="tag">Spring Boot</span>
-            <span class="tag">Kafka</span><span class="tag">AWS</span><span class="tag">BACEN</span>
-          </div>
-        </div>
-      </div>
+        </article>
 
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot"></div>
-          <div class="tl-item__line"></div>
-        </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_geo_senior_role">Programador Sênior</h3>
-              <p class="tl-item__company">GEOvendas</p>
-              <span class="tl-item__period" data-i18n="exp_geo_senior_period">Maio 2023 — Novembro 2024 · 1a 7m</span>
+        <!-- NTConsult · ACTIVE -->
+        <article class="vtl__item vtl__item--work vtl__item--active">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--now" data-i18n="ctl_badge_now">Atual</span>
+            <div class="vtl__head">
+              <img src="assets/images/ntconsult_logo.jpeg" alt="NTConsult" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_ntconsult_role">Tech Lead | Senior Backend Engineer</h3>
+                <p class="vtl__company">NTConsult</p>
+              </div>
+            </div>
+            <span class="vtl__period vtl__period--active">
+              <span data-i18n="exp_ntconsult_period_label">Abril 2025 — Presente</span>&nbsp;·&nbsp;<span id="ntconsult-duration"></span>
+            </span>
+            <p class="vtl__desc" data-i18n="exp_ntconsult_desc">Atualmente como Tech Lead na Sicredi (via NTConsult), maior cooperativa de crédito do Brasil com mais de 7 milhões de associados e atuação em 26 estados, regulada pelo Banco Central do Brasil.</p>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+              <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+              <span class="tag"><i class="devicon-apachekafka-original"></i> Kafka</span>
+              <span class="tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</span>
+              <span class="tag"><i class="devicon-kubernetes-plain colored"></i> Kubernetes</span>
             </div>
           </div>
-          <p class="tl-item__desc" data-i18n="exp_geo_senior_desc">Liderança técnica em projetos de modernização para arquitetura de microsserviços com Kotlin e Spring Boot. Responsável por design de APIs, revisão de código e integração com sistemas de parceiros internacionais.</p>
-        </div>
-      </div>
+        </article>
 
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot"></div>
-          <div class="tl-item__line"></div>
+        <!-- ── 2024 ──────────────────────────────────────────────────────── -->
+        <div class="vtl__year-mark" aria-label="2024">
+          <span class="vtl__year-pill">2024</span>
+          <span class="vtl__year-line" aria-hidden="true"></span>
         </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_geo_full_role">Programador Pleno</h3>
-              <p class="tl-item__company">GEOvendas</p>
-              <span class="tl-item__period" data-i18n="exp_geo_full_period">Julho 2022 — Abril 2023 · 10 meses</span>
+
+        <!-- CI&T / Banco PAN -->
+        <article class="vtl__item vtl__item--work">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--work" data-i18n="ctl_badge_work">Carreira</span>
+            <div class="vtl__head">
+              <img src="assets/images/ciandt_logo.jpeg" alt="CI&T" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_ciandt_role">Engenheiro de Software Sênior · Banco PAN</h3>
+                <p class="vtl__company">CI&amp;T</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="exp_ciandt_period">Novembro 2024 — Abril 2025 · 6 meses</span>
+            <div class="vtl__desc" data-i18n-html="exp_ciandt_desc">
+              <p>Desenvolvi soluções backend para prevenção a fraudes monetárias e não-monetárias no Banco PAN (via CI&amp;T), um banco digital brasileiro comparável ao Revolut ou N26 em posicionamento de mercado.</p>
+              <p>Trabalhei em um ecossistema de microsserviços de alta vazão processando aproximadamente 400 TPS, construído com Spring Boot, Quarkus e Java 8/17/21.</p>
+              <p>Reduzi o tempo de resposta de um serviço crítico de detecção de fraudes de 1.400ms para 200ms (melhoria de 85%), por meio de otimização de código, ajuste de infraestrutura e redesign da comunicação entre microsserviços.</p>
+              <p>Implementei componentes backend para atender requisitos regulatórios do Banco Central do Brasil, garantindo conformidade total e segurança nas transações.</p>
+              <p>Contribuí em discussões técnicas sobre padrões de comunicação entre serviços, melhorando a resiliência e observabilidade geral do sistema.</p>
+            </div>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-kotlin-plain colored"></i> Kotlin</span>
+              <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+              <span class="tag"><i class="devicon-quarkus-plain"></i> Quarkus</span>
+              <span class="tag"><i class="devicon-apachekafka-original"></i> Kafka</span>
+              <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+              <span class="tag"><i class="devicon-amazonwebservices-plain-wordmark colored"></i> AWS</span>
+              <span class="tag">BACEN</span>
             </div>
           </div>
-          <p class="tl-item__desc" data-i18n="exp_geo_full_desc">Desenvolvimento e manutenção de APIs RESTful, testes automatizados com JUnit e Mockito, e pipelines de CI/CD com Jenkins e GitHub Actions.</p>
-        </div>
-      </div>
+        </article>
 
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot"></div>
-          <div class="tl-item__line"></div>
+        <!-- ── 2023 ──────────────────────────────────────────────────────── -->
+        <div class="vtl__year-mark" aria-label="2023">
+          <span class="vtl__year-pill">2023</span>
+          <span class="vtl__year-line" aria-hidden="true"></span>
         </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_geo_junior_role">Programador Júnior</h3>
-              <p class="tl-item__company">GEOvendas</p>
-              <span class="tl-item__period" data-i18n="exp_geo_junior_period">Outubro 2020 — Junho 2022 · 1a 9m</span>
+
+        <!-- GEO Sênior -->
+        <article class="vtl__item vtl__item--work">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--work" data-i18n="ctl_badge_work">Carreira</span>
+            <div class="vtl__head">
+              <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_geo_senior_role">Programador Sênior</h3>
+                <p class="vtl__company">GEOvendas</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="exp_geo_senior_period">Maio 2023 — Novembro 2024 · 1a 7m</span>
+            <div class="vtl__desc" data-i18n-html="exp_geo_senior_desc">
+              <p>GEOVendas é uma empresa brasileira de SaaS B2B que oferece plataformas de CRM, automação de força de vendas e analytics para médias e grandes empresas em diversos setores.</p>
+              <p>Assumi liderança técnica no squad de manutenção, orientando desenvolvedores na entrega de soluções corretivas e evolutivas nas plataformas Analytics, Sales Force e CRM.</p>
+              <p>Liderei a integração de ponta a ponta de uma solução de telefonia ao CRM, construída do zero em parceria com um fornecedor internacional, superando desafios de integração em tempo real e garantindo consistência de dados entre os sistemas.</p>
+              <p>Atuei como principal ponto de contato entre o time de engenharia e os clientes, levantando requisitos técnicos e propondo soluções alinhadas às regras de negócio.</p>
+              <p>Gerenciei integrações entre múltiplos sistemas de ERP e plataformas parceiras, lidando com grande variedade de bancos de dados e formatos de dados.</p>
+            </div>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+              <span class="tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+              <span class="tag"><i class="devicon-angularjs-plain colored"></i> AngularJS</span>
+              <span class="tag"><i class="devicon-csharp-plain colored"></i> C# .NET</span>
+              <span class="tag">JUnit</span>
             </div>
           </div>
-          <p class="tl-item__desc" data-i18n="exp_geo_junior_desc">Desenvolvimento de funcionalidades e APIs REST no ecossistema de vendas com Java, Spring Boot e PostgreSQL. Participação em squads ágeis com Scrum e Kanban.</p>
-        </div>
-      </div>
+        </article>
 
-      <div class="tl-item">
-        <div class="tl-item__conn">
-          <div class="tl-item__dot"></div>
-          <div class="tl-item__line tl-item__line--last"></div>
+        <!-- ── 2022 ──────────────────────────────────────────────────────── -->
+        <div class="vtl__year-mark" aria-label="2022">
+          <span class="vtl__year-pill">2022</span>
+          <span class="vtl__year-line" aria-hidden="true"></span>
         </div>
-        <div class="tl-item__card">
-          <div class="tl-item__head">
-            <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="tl-item__logo" loading="lazy" />
-            <div class="tl-item__meta">
-              <h3 class="tl-item__role" data-i18n="exp_geo_intern_role">Estagiário de Desenvolvimento</h3>
-              <p class="tl-item__company">GEOvendas</p>
-              <span class="tl-item__period" data-i18n="exp_geo_intern_period">Junho 2020 — Outubro 2020 · 5 meses</span>
+
+        <!-- GEO Pleno -->
+        <article class="vtl__item vtl__item--work">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--work" data-i18n="ctl_badge_work">Carreira</span>
+            <div class="vtl__head">
+              <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_geo_full_role">Programador Pleno</h3>
+                <p class="vtl__company">GEOvendas</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="exp_geo_full_period">Julho 2022 — Abril 2023 · 10 meses</span>
+            <div class="vtl__desc" data-i18n-html="exp_geo_full_desc">
+              <p>Desenvolvi soluções de backoffice e ETL para as plataformas GEOVendas Analytics e Sales Force, utilizando Java, Spring Boot, Vaadin e PostgreSQL.</p>
+              <p>Migrei do squad de produto (Scrum/Kanban) para o squad de manutenção, expandindo responsabilidades para infraestrutura, orquestração de containers com Docker e deploys de aplicações Java via pipelines Jenkins CI/CD.</p>
+              <p>Liderei um projeto para introduzir testes unitários automatizados no codebase Java da GEOVendas com JUnit e Mockito, criando um pipeline GitHub Actions que obrigava a execução de testes antes de cada build, resultando em melhoria mensurável na qualidade de entrega e redução de bugs de regressão.</p>
+              <p>Também trabalhei com AngularJS, VueJS, CoffeeScript e APIs REST em .NET Framework, contribuindo em toda a stack quando necessário.</p>
+            </div>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+              <span class="tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+              <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+              <span class="tag"><i class="devicon-jenkins-plain"></i> Jenkins</span>
+              <span class="tag"><i class="devicon-githubactions-plain"></i> GitHub Actions</span>
+              <span class="tag">JUnit</span>
+              <span class="tag">Mockito</span>
             </div>
           </div>
-          <p class="tl-item__desc" data-i18n="exp_geo_intern_desc">Início da trajetória profissional com apoio no desenvolvimento do GEOvendas Analytics e aprendizado das bases da engenharia de software em ambiente produtivo.</p>
-        </div>
-      </div>
+        </article>
 
-    </div>
+        <!-- ── 2020 ──────────────────────────────────────────────────────── -->
+        <div class="vtl__year-mark" aria-label="2020">
+          <span class="vtl__year-pill">2020</span>
+          <span class="vtl__year-line" aria-hidden="true"></span>
+        </div>
+
+        <!-- GEO Júnior -->
+        <article class="vtl__item vtl__item--work">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--work" data-i18n="ctl_badge_work">Carreira</span>
+            <div class="vtl__head">
+              <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_geo_junior_role">Programador Júnior</h3>
+                <p class="vtl__company">GEOvendas</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="exp_geo_junior_period">Outubro 2020 — Junho 2022 · 1a 9m</span>
+            <div class="vtl__desc" data-i18n-html="exp_geo_junior_desc">
+              <p>Desenvolvi funcionalidades para o GEOVendas Analytics (sistema de relatórios de dados de vendas e backoffice) e para a plataforma Sales Force, uma ferramenta offline-first de entrada de pedidos para representantes de vendas externas com capacidade de sincronização de dados.</p>
+              <p>Trabalhei diariamente com Java, Spring Boot, Vaadin e PostgreSQL para desenvolvimento backend e de backoffice.</p>
+              <p>Contribuí no projeto Sales Force utilizando AngularJS e CoffeeScript no frontend, com CouchDB (NoSQL) para persistência de dados offline-first.</p>
+              <p>Integrei a Google Maps API para visualização geoespacial de dados de vendas na plataforma de analytics.</p>
+            </div>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-spring-plain colored"></i> Spring Boot</span>
+              <span class="tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+              <span class="tag"><i class="devicon-angularjs-plain colored"></i> AngularJS</span>
+              <span class="tag"><i class="devicon-couchdb-plain"></i> CouchDB</span>
+              <span class="tag">Google Maps API</span>
+            </div>
+          </div>
+        </article>
+
+        <!-- GEO Estagiário -->
+        <article class="vtl__item vtl__item--work">
+          <div class="vtl__node" aria-hidden="true"></div>
+          <div class="vtl__card">
+            <span class="vtl__badge vtl__badge--work" data-i18n="ctl_badge_work">Carreira</span>
+            <div class="vtl__head">
+              <img src="assets/images/geovendas_logo.jpeg" alt="GEOvendas" class="vtl__logo" loading="lazy"/>
+              <div>
+                <h3 class="vtl__role" data-i18n="exp_geo_intern_role">Estagiário de Desenvolvimento</h3>
+                <p class="vtl__company">GEOvendas</p>
+              </div>
+            </div>
+            <span class="vtl__period" data-i18n="exp_geo_intern_period">Junho 2020 — Outubro 2020 · 5 meses</span>
+            <div class="vtl__desc" data-i18n-html="exp_geo_intern_desc">
+              <p>Contribuí para o GEOVendas Analytics, sistema de backoffice e análise de dados de vendas integrado com ERPs parceiros.</p>
+              <p>Trabalhei com processamento de dados de vendas e análise geoespacial utilizando Google Maps API e múltiplas tecnologias de banco de dados.</p>
+              <p>Primeira experiência profissional: integrado à stack Java/Spring Boot/PostgreSQL em produção em poucas semanas.</p>
+            </div>
+            <div class="vtl__tags">
+              <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+              <span class="tag"><i class="devicon-postgresql-plain colored"></i> PostgreSQL</span>
+              <span class="tag">Google Maps API</span>
+            </div>
+          </div>
+        </article>
+
+      </div><!-- /vtl__body -->
+    </div><!-- /vtl -->
   </div>
 </section>
 

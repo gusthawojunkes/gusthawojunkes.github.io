@@ -17,10 +17,11 @@ const translations = {
     about_stat_years: 'anos de experiência',
     about_stat_perf:  'melhoria de performance',
     about_stat_tps:   'TPS em produção',
-    about_p1: 'Sou um Engenheiro de Software com mais de 5 anos de experiência construindo sistemas backend de alta performance e alta disponibilidade. Minha especialização está em Java e Kotlin com o ecossistema Spring Boot, projetando arquiteturas de microsserviços para aplicações que operam em escala.',
-    about_p2: 'Tenho experiência em ambientes de alta criticidade, incluindo o setor bancário. No Banco PAN, contribuí com o ecossistema antifraude — um sistema que processa mais de 400 transações por segundo sob regulamentação do Banco Central do Brasil. Nesse contexto, reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms, uma melhoria de 85%.',
-    about_p3: 'Sou defensor de código limpo, testes automatizados e integração contínua. Acredito que software de qualidade vai além da funcionalidade — é sobre manutenibilidade, observabilidade e resiliência que mantêm sistemas confiáveis ao longo do tempo.',
-    about_p4: 'Atualmente cursando pós-graduação em Arquitetura de Software na FIAP, continuo aprofundando meu conhecimento em padrões arquiteturais, design cloud-native e sistemas distribuídos.',
+    about_p1: 'Backend Tech Lead e Engenheiro de Software Sênior com mais de 5 anos construindo sistemas de alta vazão e tolerantes a falhas em ambientes financeiros regulados.',
+    about_p2: 'Progressão de Trainee a Tech Lead em 5 anos. Reduzi o tempo de resposta de um serviço crítico de 1.400ms para 200ms (melhoria de 85%) em um sistema antifraude processando 400 TPS. Liderei integrações de ponta a ponta com fornecedores internacionais e construí pipelines de CI/CD e testes automatizados do zero.',
+    about_p3: 'Atuei na prevenção a fraudes no Banco PAN (banco digital brasileiro comparável ao Revolut/N26) e atualmente lidero a engenharia backend na Sicredi, maior cooperativa de crédito do Brasil, regulada pelo Banco Central do Brasil.',
+    about_p4: 'Atualmente cursando pós-graduação em Arquitetura de Software na FIAP (principal universidade de tecnologia do Brasil), aprofundando conhecimentos em padrões arquiteturais, design cloud-native e sistemas distribuídos.',
+    about_p5: 'Além da carreira, sou co-fundador da Turbozone, uma plataforma social mobile para entusiastas automotivos que conecta apaixonados por carros no Brasil por meio de eventos, crews e showcases de veículos, com mais de 500 downloads nas lojas.',
 
     skills_title:           'Stack técnica',
     skill_java_desc:         'Spring Boot, Spring Cloud, Quarkus',
@@ -38,30 +39,44 @@ const translations = {
     skill_methodologies_desc:'Scrum, Kanban, DDD, TDD',
 
     experience_title: 'Trajetória profissional',
+    experience_caption: 'Marcos de carreira e projetos pessoais. Mais recente primeiro.',
+    ctl_legend_work:    'Carreira',
+    ctl_legend_project: 'Projeto',
+    ctl_legend_hint:    'Deslize para navegar →',
+    ctl_badge_work:     'Carreira',
+    ctl_badge_project:  'Projeto',
+    ctl_badge_now:      'Atual',
+    store_play_tag:     'DISPONÍVEL NO',
+    store_apple_tag:    'BAIXAR NA',
+
+    proj_turbozone_role:    'Co-Founder · Turbozone',
+    proj_turbozone_company: 'App Mobile · Projeto',
+    proj_turbozone_period:  'Novembro 2025 — Presente',
+    proj_turbozone_desc:    'Turbozone é uma plataforma social mobile para entusiastas automotivos. Conecta apaixonados por carros no Brasil por meio de eventos, crews (clubes de carros), showcases de veículos e um feed social. Os usuários descobrem encontros próximos, gerenciam sua garagem, registram manutenções e constroem comunidade em torno da paixão por carros. Mais de 500 downloads nas lojas.',
 
     exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
     exp_ntconsult_period_label: 'Abril 2025 — Presente',
-    exp_ntconsult_desc:         'Atuação no desenvolvimento de soluções de software orientadas a microsserviços, com foco em qualidade, escalabilidade e boas práticas de engenharia.',
+    exp_ntconsult_desc:         'Atualmente como Tech Lead na Sicredi (via NTConsult), maior cooperativa de crédito do Brasil com mais de 7 milhões de associados e atuação em 26 estados, regulada pelo Banco Central do Brasil.',
 
     exp_ciandt_role:   'Engenheiro de Software Sênior · Banco PAN',
     exp_ciandt_period: 'Novembro 2024 — Abril 2025 · 6 meses',
-    exp_ciandt_desc:   'Atuei no ecossistema antifraude do Banco PAN, desenvolvendo microsserviços que processam mais de 400 TPS sob regulamentação do Banco Central do Brasil. Reduzi o tempo de resposta de serviços críticos de 1.400ms para 200ms — melhoria de 85%.',
+    exp_ciandt_desc:   '<p>Desenvolvi soluções backend para prevenção a fraudes monetárias e não-monetárias no Banco PAN (via CI&amp;T), um banco digital brasileiro comparável ao Revolut ou N26 em posicionamento de mercado.</p><p>Trabalhei em um ecossistema de microsserviços de alta vazão processando aproximadamente 400 TPS, construído com Spring Boot, Quarkus e Java 8/17/21.</p><p>Reduzi o tempo de resposta de um serviço crítico de detecção de fraudes de 1.400ms para 200ms (melhoria de 85%), por meio de otimização de código, ajuste de infraestrutura e redesign da comunicação entre microsserviços.</p><p>Implementei componentes backend para atender requisitos regulatórios do Banco Central do Brasil, garantindo conformidade total e segurança nas transações.</p><p>Contribuí em discussões técnicas sobre padrões de comunicação entre serviços, melhorando a resiliência e observabilidade geral do sistema.</p>',
 
     exp_geo_senior_role:   'Programador Sênior',
     exp_geo_senior_period: 'Maio 2023 — Novembro 2024 · 1a 7m',
-    exp_geo_senior_desc:   'Liderança técnica em projetos de modernização para arquitetura de microsserviços com Kotlin e Spring Boot. Responsável por design de APIs, revisão de código e integração com sistemas de parceiros internacionais.',
+    exp_geo_senior_desc:   '<p>GEOVendas é uma empresa brasileira de SaaS B2B que oferece plataformas de CRM, automação de força de vendas e analytics para médias e grandes empresas em diversos setores.</p><p>Assumi liderança técnica no squad de manutenção, orientando desenvolvedores na entrega de soluções corretivas e evolutivas nas plataformas Analytics, Sales Force e CRM.</p><p>Liderei a integração de ponta a ponta de uma solução de telefonia ao CRM, construída do zero em parceria com um fornecedor internacional, superando desafios de integração em tempo real e garantindo consistência de dados entre os sistemas.</p><p>Atuei como principal ponto de contato entre o time de engenharia e os clientes, levantando requisitos técnicos e propondo soluções alinhadas às regras de negócio.</p><p>Gerenciei integrações entre múltiplos sistemas de ERP e plataformas parceiras, lidando com grande variedade de bancos de dados e formatos de dados.</p>',
 
     exp_geo_full_role:   'Programador Pleno',
     exp_geo_full_period: 'Julho 2022 — Abril 2023 · 10 meses',
-    exp_geo_full_desc:   'Desenvolvimento e manutenção de APIs RESTful, testes automatizados com JUnit e Mockito, e pipelines de CI/CD com Jenkins e GitHub Actions.',
+    exp_geo_full_desc:   '<p>Desenvolvi soluções de backoffice e ETL para as plataformas GEOVendas Analytics e Sales Force, utilizando Java, Spring Boot, Vaadin e PostgreSQL.</p><p>Migrei do squad de produto (Scrum/Kanban) para o squad de manutenção, expandindo responsabilidades para infraestrutura, orquestração de containers com Docker e deploys de aplicações Java via pipelines Jenkins CI/CD.</p><p>Liderei um projeto para introduzir testes unitários automatizados no codebase Java da GEOVendas com JUnit e Mockito, criando um pipeline GitHub Actions que obrigava a execução de testes antes de cada build, resultando em melhoria mensurável na qualidade de entrega e redução de bugs de regressão.</p><p>Também trabalhei com AngularJS, VueJS, CoffeeScript e APIs REST em .NET Framework, contribuindo em toda a stack quando necessário.</p>',
 
     exp_geo_junior_role:   'Programador Júnior',
     exp_geo_junior_period: 'Outubro 2020 — Junho 2022 · 1a 9m',
-    exp_geo_junior_desc:   'Desenvolvimento de funcionalidades e APIs REST no ecossistema de vendas com Java, Spring Boot e PostgreSQL. Participação em squads ágeis com Scrum e Kanban.',
+    exp_geo_junior_desc:   '<p>Desenvolvi funcionalidades para o GEOVendas Analytics (sistema de relatórios de dados de vendas e backoffice) e para a plataforma Sales Force — uma ferramenta offline-first de entrada de pedidos para representantes de vendas externas com capacidade de sincronização de dados.</p><p>Trabalhei diariamente com Java, Spring Boot, Vaadin e PostgreSQL para desenvolvimento backend e de backoffice.</p><p>Contribuí no projeto Sales Force utilizando AngularJS e CoffeeScript no frontend, com CouchDB (NoSQL) para persistência de dados offline-first.</p><p>Integrei a Google Maps API para visualização geoespacial de dados de vendas na plataforma de analytics.</p>',
 
     exp_geo_intern_role:   'Estagiário de Desenvolvimento',
     exp_geo_intern_period: 'Junho 2020 — Outubro 2020 · 5 meses',
-    exp_geo_intern_desc:   'Início da trajetória profissional com apoio no desenvolvimento do GEOvendas Analytics e aprendizado das bases da engenharia de software em ambiente produtivo.',
+    exp_geo_intern_desc:   '<p>Contribuí para o GEOVendas Analytics, sistema de backoffice e análise de dados de vendas integrado com ERPs parceiros.</p><p>Trabalhei com processamento de dados de vendas e análise geoespacial utilizando Google Maps API e múltiplas tecnologias de banco de dados.</p><p>Primeira experiência profissional: integrado à stack Java/Spring Boot/PostgreSQL em produção em poucas semanas.</p>',
 
     education_title:  'Educação',
     edu_fiap_level:   'Pós-Graduação',
@@ -113,10 +128,11 @@ const translations = {
     about_stat_years: 'years of experience',
     about_stat_perf:  'performance improvement',
     about_stat_tps:   'TPS in production',
-    about_p1: "I'm a Software Engineer with 5+ years of experience building high-performance, high-availability backend systems. My expertise centers on Java and Kotlin within the Spring Boot ecosystem, designing microservice architectures for applications that operate at scale.",
-    about_p2: "I've worked in high-stakes environments, including the banking sector. At Banco PAN, I contributed to the anti-fraud ecosystem — a system processing over 400 transactions per second under Brazil's Central Bank regulations. In that role, I reduced critical service response times from 1,400ms to 200ms, an 85% improvement.",
-    about_p3: 'I advocate for clean code, automated testing, and continuous integration. I believe quality software goes beyond functionality — it\'s about the maintainability, observability, and resilience that keeps systems reliable over time.',
-    about_p4: 'Currently pursuing a postgraduate degree in Software Architecture at FIAP, I continue deepening my knowledge of architectural patterns, cloud-native design, and distributed systems.',
+    about_p1: 'Backend Tech Lead and Senior Software Engineer with 5+ years building high-throughput, fault-tolerant systems in regulated financial environments.',
+    about_p2: 'Progressed from Trainee to Tech Lead within 5 years. Reduced a critical service response time from 1,400ms to 200ms (85% improvement) in a fraud prevention system processing 400 TPS. Led end-to-end integrations with international vendors and built CI/CD and automated testing pipelines from scratch.',
+    about_p3: "Worked on fraud prevention at Banco PAN (a Brazilian digital bank comparable to Revolut/N26) and currently leading backend engineering at Sicredi, Brazil's largest credit union, regulated by Brazil's Central Bank (equivalent to the ECB).",
+    about_p4: "Currently pursuing a postgraduate degree in Software Architecture at FIAP (Brazil's leading tech university), deepening knowledge in architectural patterns, cloud-native design, and distributed systems.",
+    about_p5: 'Outside of work, I co-founded Turbozone, a mobile social platform for automotive enthusiasts that connects car fans in Brazil through events, crews, and vehicle showcases, with 500+ downloads on the stores.',
 
     skills_title:           'Tech stack',
     skill_java_desc:         'Spring Boot, Spring Cloud, Quarkus',
@@ -134,30 +150,44 @@ const translations = {
     skill_methodologies_desc:'Scrum, Kanban, DDD, TDD',
 
     experience_title: 'Career timeline',
+    experience_caption: 'Career milestones and personal projects. Most recent first.',
+    ctl_legend_work:    'Career',
+    ctl_legend_project: 'Project',
+    ctl_legend_hint:    'Swipe to navigate →',
+    ctl_badge_work:     'Career',
+    ctl_badge_project:  'Project',
+    ctl_badge_now:      'Current',
+    store_play_tag:     'GET IT ON',
+    store_apple_tag:    'Download on the',
+
+    proj_turbozone_role:    'Co-Founder · Turbozone',
+    proj_turbozone_company: 'Mobile App · Project',
+    proj_turbozone_period:  'November 2025 — Present',
+    proj_turbozone_desc:    'Turbozone is a mobile social platform for automotive enthusiasts. It connects car fans in Brazil through events, crews (car clubs), vehicle showcases, and a shared social feed. Users discover nearby car meets, manage their garage, log vehicle maintenance, and build community around a shared passion for cars. 500+ downloads on the stores.',
 
     exp_ntconsult_role:         'Tech Lead | Senior Backend Engineer',
     exp_ntconsult_period_label: 'April 2025 — Present',
-    exp_ntconsult_desc:         'Working on microservices-oriented software solutions with a focus on quality, scalability, and engineering best practices.',
+    exp_ntconsult_desc:         'Currently serving as Tech Lead at Sicredi (via NTConsult), Brazil\'s largest credit union with 7M+ members and operations across 26 states, regulated by Brazil\'s Central Bank (equivalent to the ECB).',
 
     exp_ciandt_role:   'Senior Software Engineer · Banco PAN',
     exp_ciandt_period: 'November 2024 — April 2025 · 6 months',
-    exp_ciandt_desc:   "Worked on Banco PAN's anti-fraud ecosystem, developing microservices that handle 400+ TPS under Brazil's Central Bank regulations. Reduced critical service response times from 1,400ms to 200ms — an 85% improvement.",
+    exp_ciandt_desc:   '<p>Developed backend solutions for monetary and non-monetary fraud prevention at Banco PAN (via CI&amp;T), a fully digital Brazilian bank comparable to Revolut or N26 in market positioning.</p><p>Worked in a high-throughput microservices ecosystem processing approximately 400 transactions per second (TPS), built with Spring Boot, Quarkus, and Java 8/17/21.</p><p>Reduced the response time of a critical fraud detection service from 1,400ms to 200ms (an 85% improvement) through code optimization, infrastructure tuning, and microservice communication redesign.</p><p>Implemented key backend components to meet regulatory requirements from Brazil\'s Central Bank (equivalent to the ECB/Fed), ensuring full compliance and transaction security.</p><p>Contributed to technical discussions on inter-service communication patterns, improving overall system resilience and observability.</p>',
 
     exp_geo_senior_role:   'Senior Developer',
     exp_geo_senior_period: 'May 2023 — November 2024 · 1y 7m',
-    exp_geo_senior_desc:   'Technical leadership on modernization projects migrating to microservices architecture using Kotlin and Spring Boot. Responsible for API design decisions, code review, and integration with international partner systems.',
+    exp_geo_senior_desc:   '<p>GEOVendas is a Brazilian B2B SaaS company providing CRM, sales force automation, and analytics platforms to mid-to-large enterprises across multiple industries.</p><p>Took on a technical leadership role within the maintenance squad, guiding developers in delivering corrective and evolutionary solutions across GEOVendas Analytics, Sales Force, and CRM platforms.</p><p>Led the end-to-end integration of a telephony solution into the GEOVendas CRM, built from scratch in partnership with an international vendor, overcoming real-time integration challenges and ensuring data consistency between systems.</p><p>Acted as the primary point of contact between the engineering team and clients, gathering technical requirements and proposing solutions aligned with business rules.</p><p>Managed integrations between multiple ERP systems and partner platforms, handling a wide variety of databases and data formats.</p>',
 
     exp_geo_full_role:   'Mid-level Developer',
     exp_geo_full_period: 'July 2022 — April 2023 · 10 months',
-    exp_geo_full_desc:   'Development and maintenance of RESTful APIs, automated testing with JUnit and Mockito, and CI/CD pipeline setup with Jenkins and GitHub Actions.',
+    exp_geo_full_desc:   '<p>Developed backoffice and ETL solutions for GEOVendas Analytics and Sales Force platforms using Java, Spring Boot, Vaadin, and PostgreSQL.</p><p>Transitioned from the product squad (Scrum/Kanban) to the maintenance squad, expanding responsibilities to cover infrastructure, container orchestration with Docker, and Java application deployments via Jenkins CI/CD pipelines.</p><p>Led a project to introduce automated unit testing across GEOVendas\' Java codebase using JUnit and Mockito, including the creation of a GitHub Actions pipeline that enforced test execution before every build, resulting in a measurable improvement in delivery quality and reduction of regression bugs.</p><p>Also worked with AngularJS, VueJS, CoffeeScript, and .NET Framework REST APIs, contributing across the full stack when needed.</p>',
 
     exp_geo_junior_role:   'Junior Developer',
     exp_geo_junior_period: 'October 2020 — June 2022 · 1y 9m',
-    exp_geo_junior_desc:   'Feature development and REST API work in the sales ecosystem using Java, Spring Boot, and PostgreSQL. Active participation in agile squads with Scrum and Kanban.',
+    exp_geo_junior_desc:   '<p>Built features for GEOVendas Analytics (backoffice and sales data reporting system) and the Sales Force platform, an offline-first order entry tool for field sales representatives with data synchronization capabilities.</p><p>Worked daily with Java, Spring Boot, Vaadin, and PostgreSQL for backend and backoffice development.</p><p>Contributed to the Sales Force project using AngularJS and CoffeeScript on the frontend, with CouchDB (NoSQL) for offline-first data persistence.</p><p>Integrated Google Maps API for geospatial sales data visualization within the analytics platform.</p>',
 
     exp_geo_intern_role:   'Development Intern',
     exp_geo_intern_period: 'June 2020 — October 2020 · 5 months',
-    exp_geo_intern_desc:   'Began professional career supporting the development of GEOvendas Analytics and learning software engineering foundations in a production environment.',
+    exp_geo_intern_desc:   '<p>Contributed to GEOVendas Analytics, a backoffice and sales data analytical system integrated with partner ERPs.</p><p>Worked with sales data processing and geospatial analysis using Google Maps API and multiple database technologies.</p><p>First professional experience: onboarded into a production Java/Spring Boot/PostgreSQL stack within weeks.</p>',
 
     education_title:  'Education',
     edu_fiap_level:   'Postgraduate',
@@ -228,6 +258,11 @@ function applyTranslations() {
     const key = el.getAttribute('data-i18n');
     const val = translations[currentLanguage][key];
     if (val !== undefined) el.textContent = val;
+  });
+  document.querySelectorAll('[data-i18n-html]').forEach(el => {
+    const key = el.getAttribute('data-i18n-html');
+    const val = translations[currentLanguage][key];
+    if (val !== undefined) el.innerHTML = val;
   });
   updateNTConsultDuration();
 }
@@ -311,9 +346,33 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  // ── Vertical timeline scroll-reveal ──────────────────────────────────────
+  const vtlItems = document.querySelectorAll('.vtl__item');
+  if (vtlItems.length) {
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          // Stagger sibling items that appear together (batched scroll reveal)
+          const siblings = Array.from(entry.target.parentElement.querySelectorAll('.vtl__item:not(.vtl__item--visible)'));
+          const idx = siblings.indexOf(entry.target);
+          const delay = Math.max(0, idx * 60);
+          setTimeout(() => {
+            entry.target.classList.add('vtl__item--visible');
+          }, delay);
+          obs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    vtlItems.forEach(item => obs.observe(item));
+  }
+
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', e => {
-      const target = document.querySelector(anchor.getAttribute('href'));
+      const href = anchor.getAttribute('href');
+      if (!href || href.length < 2) return;
+      let target;
+      try { target = document.querySelector(href); } catch { return; }
       if (!target) return;
       e.preventDefault();
       const offset = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--nav-h')) || 66;
